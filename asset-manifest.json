@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/aaditya/static/css/main.87d5f382.css",
+    "main.js": "/aaditya/static/js/main.970c7942.js",
+    "static/js/488.afde8007.chunk.js": "/aaditya/static/js/488.afde8007.chunk.js",
+    "index.html": "/aaditya/index.html",
+    "main.87d5f382.css.map": "/aaditya/static/css/main.87d5f382.css.map",
+    "main.970c7942.js.map": "/aaditya/static/js/main.970c7942.js.map",
+    "488.afde8007.chunk.js.map": "/aaditya/static/js/488.afde8007.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87d5f382.css",
+    "static/js/main.970c7942.js"
+  ]
+}
