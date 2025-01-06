@@ -123,24 +123,23 @@ body {
   width: 100%;
   height: auto;
   margin-top: 20px;
-  display: grid;
-  grid-template-columns: 450px 450px;
-  grid-template-rows: 300px 300px;
   align-items: center;
   row-gap: 20px;
   column-gap: 20px;
   margin-left: 60px;
 }
 .cards {
-  width: 450px;
+  width: 90%;
   height: 250px;
   border-radius: 7px;
   transition: transform 0.2s ease-in-out;
   position: relative;
   display: flex;
+  margin-top: 30px;
   align-items: center;
-  justify-content: center;
   cursor: pointer;
+  background-color: #FFD43B;
+  box-shadow: 7px 7px 0px black;
 }
 .left-controll {
   width: 100%;
@@ -205,7 +204,7 @@ body {
   height: auto;
   display: grid;
   grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 350px 350px 350px;
+  grid-template-rows: 350px 350px;
   gap: 20px;
   margin-left: 30px;
 }
@@ -260,26 +259,28 @@ body {
   width: 150px;
   height: 40px;
   background-color: #FFD43B;
+  border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: poppins;
   position: absolute;
-  right: 30px;
+  left: 30px;
   top: -10px;
   border-radius: 6px;
   box-shadow: 5px 5px 0px black;
+  z-index: 5;
 }
 .tec-container{
-  width: 90%;
+  width: 280px;
   height: auto;
+  padding-bottom: 10px;
+  margin-top: 30px;
   display: grid;
-  grid-template-columns: 100px 100px 100px ;
-  grid-template-rows: 70px 70px 70px;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 50px;
+  grid-template-columns: 100px 100px ;
+  margin-left: 30px;
+  gap: 20px;
+  border-radius: 7px;
 }
 .tech{
   width: 100px;
@@ -289,12 +290,117 @@ body {
   justify-content: center;
   font-family: poppins;
 }
+.tech p{
+  margin-left: 20px;
+}
 .tech img{
   width: 30px;
   height: 30px;
   margin-left: 10px;
 }
+.tec-knowledge{
+  width: 60%;
+  height: 80%;
+  background-size:auto;
+  background-repeat: repeat;
+  border-radius: 7px;
+  margin-left: 30px;
+}
+.tec-kn-container{
+  width: 100% ;
+  height: 500px;
+}
+.tec-kn-container span{
+  margin-top: 30px;
+  font-size: 14px;
+}
+.circle-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
 
+.circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(#4caf50 calc(var(--percentage) * 1%), #e0e0e0 0%);
+}
+.circle-text {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+  background-color: white;
+}
+.stat{
+  width: 90%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-top: 20px;
+  margin-left: 60px;
+  flex-direction: row;
+  gap: 30px;
+}
+.total-questions{
+  width: 200px;
+  height: 80%;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.total-questions p{
+  font-family: poppins;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+.total-questions h2{
+  font-family: poppins;
+  font-size: 40px;
+  color: black;
+  font-weight: bold;
+  margin-top: 0px;
+}
+.DAS-topics{
+  width: 400px;
+  height: 80%;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.topics{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.topic-div{
+  display: flex;
+  margin-top: 5px;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 20px;
+  height: 20px;
+  border-bottom: 1px solid grey;
+}
 /* Keyframes for floating animation */
 @keyframes float {
   0% {
@@ -307,23 +413,3 @@ body {
     transform: translateY(0);
   }
 }
-
-
-
-
-/* Apply the animation to the div elements */
-.cards > div {
-  animation: float 3s ease-in-out infinite;
-}
-
-/* Add a delay to each child element to create a staggered effect */
-.cards > div:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.cards > div:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.cards > div:nth-child(3) {
-  animation-delay: 0.3s;
-}
-/* Add more nth-child selectors as needed */
