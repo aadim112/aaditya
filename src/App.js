@@ -46,48 +46,48 @@ function App() {
       <div className="dynamic-layout" id="dynamic">
         <p style={{fontFamily:'Poppins',fontSize:'35px',marginBottom:'0px',fontWeight:'bold',marginLeft:'30px'}}>Aditya M Patil</p>
         <div className="home" style={{display:window === 0 ? 'block' : 'none'}}>
-          <div className="banner-container">
-            <div className="banner">
-              <div className="image-container">
-                <img src="https://media.licdn.com/dms/image/v2/D4D35AQFR7yBIx2ugqQ/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1710594384324?e=1736319600&v=beta&t=bNexletunAqiaS_tztFuCoseH6zS73qpZNskFELKUNU" alt="image" width="100%" height="100%" style={{objectFit:'cover',borderRadius:'8px'}}/>
-              </div>
-              <div className="about-container" data-aos="fade-out">
-                <div className="about">
-                  <p style={{ color: '#FFD524', marginLeft: '20px', fontFamily: 'Poppins', fontWeight: 300, fontSize: '20px', marginBottom: '0px'}}>Welcome to my little corner of the web</p>
-                  <p style={{ marginLeft: '20px', fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>Hello, I am Aditya Patil student at Dr. D. Y. Patil Institute of Engineering, Management and Research, Pune</p>
-                  <p style={{ marginLeft: '20px', fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>I always try to seek for solution any technical problems. I love to solve this issues
-                     using my technical skills and learn them whenever needed.I have varius projects in my bucket which were devloped to solve such problems.
-                  </p>
-                  <p style={{ marginLeft: '20px', fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>I have good knowledge of website development and deployment. Many of my project use web platform. Currently I am studying about Machine Learning and Advance Machine Learning concepts.</p>
-                  <p style={{ marginLeft: '20px', fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>Apart from technical things I like to play video games as they are entertaining also they impove reflexes and increases fast decision making power.</p>
+            <div className="banner-container">
+              <div className="banner">
+                <div className="image-container">
+                  <img src="https://media.licdn.com/dms/image/v2/D4D35AQFR7yBIx2ugqQ/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1710594384324?e=1736319600&v=beta&t=bNexletunAqiaS_tztFuCoseH6zS73qpZNskFELKUNU" alt="image" width="100%" height="100%" style={{objectFit:'cover',borderRadius:'8px'}}/>
+                </div>
+                <div className="about-container">
+                  <div className="about">
+                    <p style={{ color: '#FFD524', marginLeft: '20px', fontFamily: 'Poppins', fontWeight: 300, fontSize: '20px', marginBottom: '0px'}}>Welcome to my little corner of the web</p>
+                    <p style={{ marginLeft: '20px', fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>Hello, I am Aditya Patil student at Dr. D. Y. Patil Institute of Engineering, Management and Research, Pune</p>
+                    <p style={{ marginLeft: '20px', fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>I always try to seek for solution any technical problems. I love to solve this issues
+                      using my technical skills and learn them whenever needed.I have varius projects in my bucket which were devloped to solve such problems.
+                    </p>
+                    <p style={{ marginLeft: '20px', fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>I have good knowledge of website development and deployment. Many of my project use web platform. Currently I am studying about Machine Learning and Advance Machine Learning concepts.</p>
+                    <p style={{ marginLeft: '20px', fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>Apart from technical things I like to play video games as they are entertaining also they impove reflexes and increases fast decision making power.</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
           <div className="stats">
             <div className="stat-label">
               <p>Find Me</p>
             </div>
-            <div className="find-me" style={{ marginLeft: '20px' }}>
+            <div className="find-me">
               <i className="fa-brands fa-github fa-lg" style={{ color: 'black' }}></i>
-              <p>Github</p>
+              <a href='https://github.com/aadim112' style={{textDecoration:'none'}}><p  style={{color:'black'}}>Github</p></a>
             </div>
             <div className="find-me">
               <img src="https://user-images.githubusercontent.com/63964149/152531278-5e01909d-0c2e-412a-8acc-4a06863c244d.png" style={{ width: '30px', height: '30px' }} />
-              <p>leet Code</p>
+              <a href='https://leetcode.com/u/aadi_m/' style={{textDecoration:'none'}}><p style={{color:'black'}}>leet Code</p></a>
             </div>
             <div className="find-me">
               <img src="https://codolio.com/codolio_assets/codolio.svg" style={{ width: '30px', height: '30px' }} />
-              <p>Codolio</p>
+              <a href='https://codolio.com/profile/Aaditya' style={{textDecoration:'none'}}><p style={{color:'black'}}>Codolio</p></a>
             </div>
             <div className="find-me">
               <i className="fa-brands fa-linkedin fa-lg" style={{ color: 'rgba(25, 102, 204, 0.7)' }}></i>
-              <p>Linkedin</p>
+              <a href='www.linkedin.com/in/adityapatilm' style={{textDecoration:'none'}}><p style={{color:'black'}}>Linkedin</p></a>
             </div>
           </div>
           <p style={{ fontFamily: 'poppins', color: 'black', marginLeft: '30px', fontSize: '20px', fontWeight: 'bold' }}>Know my cards</p>
           <div className="tech-stack">
-            <div className="cards" data-aos="slide-up">
+            <div className="cards">
               <div className='card-label'><p>Tech Stack</p></div>
               <div className='tec-container'>
                 <div className='tech'>
