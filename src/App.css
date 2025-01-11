@@ -194,19 +194,61 @@ body {
 .home {
   display: block;
 }
-.projects {
+.project-tab{
   display: block;
 }
+.projects{
+  display: flex;
+}
 .certification {
+
 }
 .projects-container {
-  width: 100%;
+  width: auto;
   height: auto;
   display: grid;
-  grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 350px 350px;
-  gap: 20px;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 500px 500px;
   margin-left: 30px;
+}
+.project-overview{
+  width: 1000px;
+  height: auto;
+  margin-right: 10px;
+}
+.prj-thumbnail{
+  width: 500px;
+  height: 500px;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 7px;
+}
+.prj-thumbnail img{
+  width: 500px;
+  height: 500px;
+  object-fit:cover;
+  transition: transform 0.15s ease-in-out;
+}
+.prj-thumbnail img:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.git-link{
+  width: 150px;
+  height: 50px;
+  background-color: black;
+  border-radius: 7px;
+  display: flex;
+  color: white;
+  font-family: poppins;
+  align-items: center;
+  justify-content: space-around;
+  text-decoration: none;
+}
+.git-link p{
+  text-decoration: none;
+  color: white;
 }
 .prj {
   width: 300px;
@@ -319,7 +361,6 @@ body {
   width: 150px;
   height: 150px;
 }
-
 .circle {
   width: 100%;
   height: 100%;
@@ -471,6 +512,8 @@ body {
     margin-top: 50px;
   }
 }
+
+
 @media (max-width: 500px){
   .dynamic-layout{
     width: 600px;

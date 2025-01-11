@@ -2,24 +2,24 @@ import React, { useEffect, useState } from 'react';
 import './App.css'; // Move the styles to a separate CSS file
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import ProjectsData from './Assets/ProjectDatabase'
 
-const Bargraph = ({w,tp}) => {
-  return(
-    <div className='topic-div'>
-      <div style={{fontFamily:'poppins',fontWeight:'bold',fontSize:'14px',color:'rgb(89, 89, 89)',display:'flex',alignItems:'center'}}>{tp} </div>
-      <div style={{fontFamily:'poppins',fontSize:'14px',width:`${w}%`,height:'95%',backgroundColor:'#1f0538',color:'white',textAlign:'center',fontWeight:'bold',marginLeft:'20px',borderTopLeftRadius:'5px',borderBottomLeftRadius:'5px'}}>{w}</div>
-    </div>
-  )
-}
 
 function App() {
 
   const w = [0,1,2,3]
   const [window,setWindow] = useState(0);
+  const [selectedProject, setSelectedProject] = useState(null);
+
 
   const handleWindow = (e) => {
     console.log(e);
     setWindow(e);
+  };
+  
+  const handleProject = (project) => {
+    setSelectedProject(project);
+    console.log(selectedProject)
   };
 
     // Initialize AOS only once
@@ -30,6 +30,49 @@ function App() {
         easing: 'ease-in-out',
       });
     }, []);
+
+
+    // ////////////////////////////////////////////////////Components Here
+    const ProjectOverview = ({SelectedProject}) => {
+      if (!SelectedProject) return null;
+      return(
+        <div className='project-overview' style={{display:SelectedProject != null ? 'block' : 'none'}}>
+          <p style={{margin:'0px',fontFamily:'poppins',fontWeight:'bold',color:'grey',fontSize:'19px'}}>Project Overview</p>
+          <div className='prj-thumbnail'>
+            <img src={SelectedProject.link} alt={SelectedProject.title} />
+          </div>
+          <p style={{fontFamily:'poppins',fontSize:'19px',fontWeight:'bold',color:'grey'}}>{SelectedProject.title} </p>
+          <p style={{fontFamily:'poppins'}}>{SelectedProject.description}</p>
+          <a href={SelectedProject.link}><div className='git-link'>
+            <i class="fa-brands fa-github fa-lg" style={{color: '#ffffff'}}></i>
+            <p>Github</p>
+          </div></a>
+        </div>
+      )
+    }
+
+    const ProjectCards = ({imgsrc,projectName,ProjectSummary,prj}) => {
+      return (
+      <div className="prj">
+        <div className='prj-img-container'><img src={imgsrc} /></div>
+        <h2>{projectName}</h2>
+        <p style={{ width: '80%', fontFamily: 'poppins', fontSize: '14px' }}>{ProjectSummary}</p>
+        <div className="view-prj" onClick={() => {handleProject(prj)}}><p style={{ fontFamily: 'poppins', margin: '10px' }}>View</p><i className="fa-solid fa-arrow-right" style={{ color: '#ffffff', marginRight: '10px' }}></i></div>
+      </div>
+      )
+    }
+
+
+    const Bargraph = ({w,tp}) => {
+      return(
+        <div className='topic-div'>
+          <div style={{fontFamily:'poppins',fontWeight:'bold',fontSize:'14px',color:'rgb(89, 89, 89)',display:'flex',alignItems:'center'}}>{tp} </div>
+          <div style={{fontFamily:'poppins',fontSize:'14px',width:`${w}%`,height:'95%',backgroundColor:'#1f0538',color:'white',textAlign:'center',fontWeight:'bold',marginLeft:'20px',borderTopLeftRadius:'5px',borderBottomLeftRadius:'5px'}}>{w}</div>
+        </div>
+      )
+    } 
+    /////////////////////////////////////////////////////////Components End/////////////
+
   return (
     <div className="layout">
       <div className="static-layout">
@@ -46,6 +89,7 @@ function App() {
       <div className="dynamic-layout" id="dynamic">
         <p style={{fontFamily:'Poppins',fontSize:'35px',marginBottom:'0px',fontWeight:'bold',marginLeft:'30px'}}>Aditya M Patil</p>
         <div className="home" style={{display:window === 0 ? 'block' : 'none'}}>
+        <h2 style={{ fontFamily: 'Poppins', marginLeft: '30px', color:'grey'}}>Home</h2>
             <div className="banner-container">
               <div className="banner">
                 <div className="image-container">
@@ -150,28 +194,26 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="projects" style={{display:window === 1 ? 'block' : 'none'}}>
-          <h2 style={{ fontFamily: 'Poppins', marginLeft: '30px' }}>Projects</h2>
-          <p style={{ fontFamily: 'poppins', marginLeft: '30px', textAlign: 'left', width: '70%' }}>Working on projects in my most liked work. I do spend lot of the time developing the Solutions on the problems I see around me. Some of my works are below.</p>
-          <div className="projects-container">
-            <div className="prj">
-              <div className='prj-img-container'><img src="https://images.unsplash.com/photo-1530546171585-cc042ea5d7ab?q=80&w=1872&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></div>
-              <h2>Home Assistant Using Arduino</h2>
-              <p style={{ width: '80%', fontFamily: 'poppins', fontSize: '14px' }}>Home Assistant was a simple model was created in intentions to serve as home member.</p>
-              <div className="view-prj"><p style={{ fontFamily: 'poppins', margin: '10px' }}>View</p><i className="fa-solid fa-arrow-right" style={{ color: '#ffffff', marginRight: '10px' }}></i></div>
+
+        {/* Here will be the projects */}
+        <h2 style={{ fontFamily: 'Poppins', marginLeft: '30px',color:'grey'}}>Projects</h2>
+        <div className="project-tab" style={{display:window === 1 ? 'block' : 'none'}}>
+          <div className='projects'>
+            <div className='project-preview'>
+              <p style={{ fontFamily: 'poppins', marginLeft: '30px', textAlign: 'left', width: '90%' }}>Working on projects in my most liked work. I do spend lot of the time developing the Solutions on the problems I see around me. Some of my works are below.</p>
+              <div className="projects-container">
+                {ProjectsData.projects.map((projects, index) => (
+                  <ProjectCards 
+                      key={index} 
+                      imgsrc={projects.link} 
+                      projectName={projects.title} 
+                      ProjectSummary={projects.summary}
+                      prj = {projects}
+                  />
+                ))}
+              </div>
             </div>
-            <div className="prj">
-            <div className='prj-img-container'><img src="https://images.unsplash.com/photo-1530695801911-f188c516550a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /></div>
-              <h2>Canteen Management Website</h2>
-              <p style={{ width: '80%', fontFamily: 'poppins', fontSize: '14px' }}>This project was taken as a challenge to create a website to handle massive unorganized food serving techniques on college canteen.</p>
-              <div className="view-prj"><p style={{ fontFamily: 'poppins', margin: '10px' }}>View</p><i className="fa-solid fa-arrow-right" style={{ color: '#ffffff', marginRight: '10px' }}></i></div>
-            </div>
-            <div className="prj">
-            <div className='prj-img-container'><img src="https://figures.semanticscholar.org/fc3757fac22d5e0983baf60e82883455bbe88906/3-Figure2-1.png" /></div>
-              <h2>Router</h2>
-              <p style={{ width: '80%', fontFamily: 'poppins', fontSize: '14px' }}>This project is based on the ESP32 and object Detection in ML and guiding people who are unable to see clearly. This uses haptic feedback to the user at different positions on the hand.</p>
-              <div className="view-prj"><p style={{ fontFamily: 'poppins', margin: '0px' }}>View</p><i className="fa-solid fa-arrow-right" style={{ color: '#ffffff', marginRight: '10px' }}></i></div>
-            </div>
+            <ProjectOverview SelectedProject={selectedProject}/>
           </div>
         </div>
         <div className="Certification" style={{display:window === 2 ? 'block' : 'none'}}>
