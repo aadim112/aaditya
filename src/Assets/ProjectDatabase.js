@@ -24,6 +24,26 @@ const ProjectsData = {
             "summary": "An application to manage and organize daily tasks.",
             "link": "https://figures.semanticscholar.org/fc3757fac22d5e0983baf60e82883455bbe88906/3-Figure2-1.png"
         }
+    ],
+    "certifications": [
+        {
+            "title": "JavaScript Algorithms and Data Structures",
+            "platform": "freeCodeCamp",
+            "credential": "12345-abcde",
+            "link": "https://images.unsplash.com/photo-1530546171585-cc042ea5d7ab?q=80&w=1872&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+            "title": "Responsive Web Design",
+            "platform": "freeCodeCamp",
+            "credential": "67890-fghij",
+            "link": "https://images.unsplash.com/photo-1530546171585-cc042ea5d7ab?q=80&w=1872&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        },
+        {
+            "title": "Front-End Web Developer Nanodegree",
+            "platform": "Udacity",
+            "credential": "ud12345",
+            "link": "https://images.unsplash.com/photo-1530546171585-cc042ea5d7ab?q=80&w=1872&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        }
     ]
 }
 

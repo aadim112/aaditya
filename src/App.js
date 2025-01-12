@@ -3,6 +3,7 @@ import './App.css'; // Move the styles to a separate CSS file
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import ProjectsData from './Assets/ProjectDatabase'
+import profileImage from './Assets/profile.jpg'
 
 
 function App() {
@@ -60,7 +61,7 @@ function App() {
         <div className="view-prj" onClick={() => {handleProject(prj)}}><p style={{ fontFamily: 'poppins', margin: '10px' }}>View</p><i className="fa-solid fa-arrow-right" style={{ color: '#ffffff', marginRight: '10px' }}></i></div>
       </div>
       )
-    }
+    };
 
 
     const Bargraph = ({w,tp}) => {
@@ -70,20 +71,34 @@ function App() {
           <div style={{fontFamily:'poppins',fontSize:'14px',width:`${w}%`,height:'95%',backgroundColor:'#1f0538',color:'white',textAlign:'center',fontWeight:'bold',marginLeft:'20px',borderTopLeftRadius:'5px',borderBottomLeftRadius:'5px'}}>{w}</div>
         </div>
       )
-    } 
+    };
+
+    const CertificateCard = ({immglink,platform,credentials,title}) => {
+      return(
+        <div className='certficate-card'>
+          <div className='cert-image'>
+            <img style={{width:'100%',height:'100%'}} src={immglink} alt='certicate'></img>
+          </div>
+          <a href='#' style={{textDecoration:'none',color:'black',fontFamily:'poppins'}}>
+            <div className='cert-info'>
+              <p style={{fontWeight:'bold'}}>{title}</p>
+              <p>From : {platform}</p>
+              <p>Credentials : {credentials}</p>
+            </div>
+          </a>
+        </div>
+      )
+    };
     /////////////////////////////////////////////////////////Components End/////////////
 
   return (
     <div className="layout">
       <div className="static-layout">
-        <div className="left-controll">
-        </div>
         <div className="options">
           <div className="opt" onClick={ () => {handleWindow(0)}}><i className="fa-regular fa-address-card fa-lg"></i><p>About</p></div>
           <div className="opt" onClick={ () => {handleWindow(1)}}><i className="fa-solid fa-laptop fa-lg"></i><p>Projects</p></div>
           <div className="opt" onClick={ () => {handleWindow(2)}}><i class="fa-solid fa-trophy fa-lg"></i><p>Certifications</p></div>
           <div className="opt" onClick={ () => {handleWindow(3)}}><i className="fa-solid fa-file fa-lg"></i><p>CV/Resume</p></div>
-          <div className="opt"><p>Work in Progress</p></div>
         </div>
       </div>
       <div className="dynamic-layout" id="dynamic">
@@ -93,7 +108,7 @@ function App() {
             <div className="banner-container">
               <div className="banner">
                 <div className="image-container">
-                  <img src="https://media.licdn.com/dms/image/v2/D4D35AQFR7yBIx2ugqQ/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1710594384324?e=1736319600&v=beta&t=bNexletunAqiaS_tztFuCoseH6zS73qpZNskFELKUNU" alt="image" width="100%" height="100%" style={{objectFit:'cover',borderRadius:'8px'}}/>
+                  <img src={profileImage} alt="image" width="100%" height="100%" style={{objectFit:'cover',borderRadius:'8px'}}/>
                 </div>
                 <div className="about-container">
                   <div className="about">
@@ -126,7 +141,7 @@ function App() {
             </div>
             <div className="find-me">
               <i className="fa-brands fa-linkedin fa-lg" style={{ color: 'rgba(25, 102, 204, 0.7)' }}></i>
-              <a href='www.linkedin.com/in/adityapatilm' style={{textDecoration:'none'}}><p style={{color:'black'}}>Linkedin</p></a>
+              <a href='https://www.linkedin.com/in/adityapatilm/' style={{textDecoration:'none'}}><p style={{color:'black'}}>Linkedin</p></a>
             </div>
           </div>
           <p style={{ fontFamily: 'poppins', color: 'black', marginLeft: '30px', fontSize: '20px', fontWeight: 'bold' }}>Know my cards</p>
@@ -196,12 +211,12 @@ function App() {
         </div>
 
         {/* Here will be the projects */}
-        <h2 style={{ fontFamily: 'Poppins', marginLeft: '30px',color:'grey'}}>Projects</h2>
         <div className="project-tab" style={{display:window === 1 ? 'block' : 'none'}}>
+        <h2 style={{ fontFamily: 'Poppins', marginLeft: '30px',color:'grey'}}>Projects</h2>
           <div className='projects'>
             <div className='project-preview'>
               <p style={{ fontFamily: 'poppins', marginLeft: '30px', textAlign: 'left', width: '90%' }}>Working on projects in my most liked work. I do spend lot of the time developing the Solutions on the problems I see around me. Some of my works are below.</p>
-              <div className="projects-container">
+              <div className="projects-container" style={{gridTemplateColumns : selectedProject != null ? '300px 300px' : '300px 300px 300px'}}>
                 {ProjectsData.projects.map((projects, index) => (
                   <ProjectCards 
                       key={index} 
@@ -217,8 +232,20 @@ function App() {
           </div>
         </div>
         <div className="Certification" style={{display:window === 2 ? 'block' : 'none'}}>
-          <h2 style={{ fontFamily: 'Poppins', marginLeft: '30px', textAlign: 'center'}}>Certifications</h2>
-          <p style={{ fontFamily: 'poppins', marginLeft: '30px',textAlign:'center' }}>Below are some of my certifications from some of the well-known websites and competitive websites.</p>
+          <h2 style={{ fontFamily: 'Poppins', marginLeft: '30px',color:'grey'}}>Certifications</h2>
+          <p style={{ fontFamily: 'poppins', marginLeft: '30px', textAlign: 'left', width: '90%' }}>Below are some of my certifications from some of the well-known websites and competitive websites.</p>
+          <div className='certificate-container'>
+
+            {ProjectsData.certifications.map((certificate,index) => (
+              <CertificateCard 
+                  key={index} 
+                  title={certificate.title} 
+                  immglink={certificate.link} 
+                  platform={certificate.platform}  
+                  credentials={certificate.credential} 
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

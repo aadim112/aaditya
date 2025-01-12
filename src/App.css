@@ -171,6 +171,7 @@ body {
   align-items: center;
   gap: 30px;
   justify-content: center;
+  margin-top: 30px;
 }
 .opt {
   width: 85%;
@@ -442,6 +443,44 @@ body {
   height: 20px;
   border-bottom: 1px solid grey;
 }
+.certificate-container{
+  width: 95%;
+  height: 300px;
+  display: grid;
+  margin-left: 20px;
+  grid-template-columns: 300px 300px auto;
+  grid-column: 400px 400px auto;
+  gap: 30px;
+}
+.certficate-card{
+  width: 300px;
+  height: 280px;
+  border-radius: 7px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-position:top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.cert-image{
+  width: 300px;
+  object-fit: cover;
+  height: 200px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.cert-info{
+  width: 400px;
+  height: 80px;
+  border-radius: 7px;
+}
+.cert-info p{
+  width: 300px;
+  margin: 0px;
+}
 /* Keyframes for floating animation */
 @keyframes float {
   0% {
@@ -480,6 +519,7 @@ body {
     align-items: center;
     gap: 20px;
     justify-content:space-around;
+    margin-left: 30px;
   }
   .dynamic-layout{
     width: 100%;
@@ -510,6 +550,19 @@ body {
   }
   .stats{
     margin-top: 50px;
+  }
+  .certificate-container{
+    height: auto;
+    grid-template-columns: 280px auto;
+    grid-template-rows: 350px;
+    gap: 10px;
+  }
+  .certficate-card{
+    width: 250px;
+    height: 500px;
+  }
+  .cert-image{
+    width: 250px;
   }
 }
 
@@ -572,5 +625,18 @@ body {
     align-items: center;
     justify-content: start;
     margin-left: 30px;
+  }
+  .certificate-container{
+    height: auto;
+    grid-template-columns: 280px auto;
+    grid-template-rows: 350px;
+    gap: 10px;
+  }
+  .certficate-card{
+    width: 250px;
+    height: 500px;
+  }
+  .cert-image{
+    width: 250px;
   }
 }
