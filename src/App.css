@@ -481,6 +481,28 @@ body {
   width: 300px;
   margin: 0px;
 }
+.tect-lang{
+  width: 100%;
+  height:auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+  gap: 20px;
+}
+.tect-lang p{
+  width: auto;
+  height:   15px;
+  padding: 8px;
+  background-color: rgb(81, 81, 255);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: poppins;
+  border-radius: 7px;
+  margin: 0px;
+}
 /* Keyframes for floating animation */
 @keyframes float {
   0% {

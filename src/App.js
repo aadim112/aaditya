@@ -40,11 +40,16 @@ function App() {
         <div className='project-overview' style={{display:SelectedProject != null ? 'block' : 'none'}}>
           <p style={{margin:'0px',fontFamily:'poppins',fontWeight:'bold',color:'grey',fontSize:'19px'}}>Project Overview</p>
           <div className='prj-thumbnail'>
-            <img src={SelectedProject.link} alt={SelectedProject.title} />
+            {/* <img src={require(`${SelectedProject.link}`)} alt={SelectedProject.title} /> */}
           </div>
           <p style={{fontFamily:'poppins',fontSize:'19px',fontWeight:'bold',color:'grey'}}>{SelectedProject.title} </p>
+          <div className='tect-lang'>
+            {SelectedProject.technologies.map((tech,index)=>(
+                <p key={index}>{tech}</p>
+            ))}
+          </div>
           <p style={{fontFamily:'poppins'}}>{SelectedProject.description}</p>
-          <a href={SelectedProject.link}><div className='git-link'>
+          <a href={SelectedProject.link} style={{textDecoration:'none'}}><div className='git-link'>
             <i class="fa-brands fa-github fa-lg" style={{color: '#ffffff'}}></i>
             <p>Github</p>
           </div></a>
@@ -73,11 +78,11 @@ function App() {
       )
     };
 
-    const CertificateCard = ({immglink,platform,credentials,title}) => {
+    const CertificateCard = ({imaglink,platform,credentials,title}) => {
       return(
         <div className='certficate-card'>
           <div className='cert-image'>
-            <img style={{width:'100%',height:'100%'}} src={immglink} alt='certicate'></img>
+            <img style={{width:'100%',height:'100%'}} src={require(`${imaglink}`)} alt='certicate'></img>
           </div>
           <a href='#' style={{textDecoration:'none',color:'black',fontFamily:'poppins'}}>
             <div className='cert-info'>
@@ -240,7 +245,7 @@ function App() {
               <CertificateCard 
                   key={index} 
                   title={certificate.title} 
-                  immglink={certificate.link} 
+                  imaglink={certificate.link} 
                   platform={certificate.platform}  
                   credentials={certificate.credential} 
               />
