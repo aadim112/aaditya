@@ -4,6 +4,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import ProjectsData from './Assets/ProjectDatabase'
 import profileImage from './Assets/profile.jpg'
+import Resume from './Assets/Resume.pdf'
 
 
 function App() {
@@ -40,7 +41,7 @@ function App() {
         <div className='project-overview' style={{display:SelectedProject != null ? 'block' : 'none'}}>
           <p style={{margin:'0px',fontFamily:'poppins',fontWeight:'bold',color:'grey',fontSize:'19px'}}>Project Overview</p>
           <div className='prj-thumbnail'>
-            {/* <img src={require(`${SelectedProject.link}`)} alt={SelectedProject.title} /> */}
+            <img src={require(`${SelectedProject.link}`)} alt={SelectedProject.title} />
           </div>
           <p style={{fontFamily:'poppins',fontSize:'19px',fontWeight:'bold',color:'grey'}}>{SelectedProject.title} </p>
           <div className='tect-lang'>
@@ -225,7 +226,7 @@ function App() {
                 {ProjectsData.projects.map((projects, index) => (
                   <ProjectCards 
                       key={index} 
-                      imgsrc={projects.link} 
+                      imgsrc={require(`${projects.link}`)} 
                       projectName={projects.title} 
                       ProjectSummary={projects.summary}
                       prj = {projects}
@@ -251,6 +252,9 @@ function App() {
               />
             ))}
           </div>
+        </div>
+        <div className="resume" style={{display:window === 3 ? 'block' : 'none'}}>
+          <embed src={Resume} style={{width:'100%',height:'100%'}}/>
         </div>
       </div>
     </div>

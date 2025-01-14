@@ -4,7 +4,7 @@ const ProjectsData = {
             "title": "Personal Portfolio Website",
             "description": "A personal portfolio website to showcase my projects and skills.I created this website using HTML, CSS, JavaScript for managing the frontend and Flask for managing backend. The best part of the webiste is that every details of the website are editable due to backend.",
             "technologies": ["HTML", "CSS", "JavaScript","Flask"],
-            "link": "https://images.unsplash.com/photo-1530546171585-cc042ea5d7ab?q=80&w=1872&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "link": "./Assets/projectsimage/portfolio.png",
             "summary": "A website to display my professional portfolio and projects.",
             "gitlink" :'abc.com'
         },
@@ -12,7 +12,7 @@ const ProjectsData = {
             "title": "Canteen Website",
             "description": "A web application to work as online food serving for college. This web-app was designed to reduce waiting time, crowd and decrease food wastagel. This web-app also has functionality to book the table at the canteen site.",
             "technologies": ["HTML", "API", "CSS","Flask","SQLite Database"],
-            "link": "https://images.unsplash.com/photo-1530695801911-f188c516550a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "link": "./Assets/projectsimage/canteen.png",
             "summary": "A web application to work as online food serving for college.",
             "gitlink" :'abc.com'
         },
@@ -21,9 +21,25 @@ const ProjectsData = {
             "description": "Email Assistant is an app to assist with daily emails and meeting mentioned inside the email. As this app fetches the email using simple gmail lebrary and then process it using the google transformation model. It also detects for the meetings mentioned in the emails and plot this meetings on the calender.",
             "technologies": ["ReactNative","FLask API", "Simplegmail", "Google Auth2.O"],
             "summary": "An application to manage and organize emails and meetings and assist with the daily schedule.",
-            "link": "https://figures.semanticscholar.org/fc3757fac22d5e0983baf60e82883455bbe88906/3-Figure2-1.png",
+            "link": "./Assets/projectsimage/canteen.png",
             "gitlink" :'abc.com'
-        }
+        },
+        {
+            "title" : "Home Assistant using Arduino",
+            "description":"Home Assistant devloped using Arduino and various other modules. In this project we use google speech recognition to get the commands from the user and send the signal to the ardino using bluetooth module. We also created an app to manage various applications connected to the arduino and the app was build using logic blocks.",
+            "technologies" : ["C++","Python","Speech Recognition"],
+            "summary" : "An Arduino based project to controll varios home appliances.",
+            "link":"./Assets/projectsimage/Accomodation.png",
+            "gitlink" : 'anb.com'
+        },
+        {
+            "title" : "Accomodation Website",
+            "description":"Accomodation website is devloped to convinently find the accomodations for students near the educational institute.This website also has feature to find the member for the accomodation if any accomodation have vacency. This website offers various features such as rating for accomodation and knew the facilities available in the accomodation.",
+            "technologies" : ["React","firebase","Google Login"],
+            "summary" : "Accomodation is website for finding the best accomodation near the educational institutes.",
+            "link":"./Assets/projectsimage/Accomodation.png",
+            "gitlink" : 'anb.com'
+        },
     ],
     "certifications": [
         {

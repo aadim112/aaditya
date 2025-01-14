@@ -208,7 +208,7 @@ body {
   width: auto;
   height: auto;
   display: grid;
-  grid-template-columns: 300px 300px;
+  grid-template-columns: 300px 300px 300px;
   grid-template-rows: 500px 500px;
   margin-left: 30px;
 }
@@ -223,11 +223,13 @@ body {
   margin-top: 20px;
   overflow: hidden;
   border-radius: 7px;
+  background-color: rgba(222, 222, 222, 0.199);
 }
 .prj-thumbnail img{
   width: 500px;
   height: 500px;
-  object-fit:cover;
+  object-fit:contain;
+  object-position: left;
   transition: transform 0.15s ease-in-out;
 }
 .prj-thumbnail img:hover{
@@ -253,7 +255,7 @@ body {
 }
 .prj {
   width: 300px;
-  height: 450px;
+  height: 410px;
   border-radius: 8px;
   padding-top: 20px;
   display: flex;
@@ -287,16 +289,17 @@ body {
   width: 80%;
 }
 .view-prj {
-  width: 150px;
+  width: 86%;
   height: 50px;
   background-color: black;
-  border-radius: 10px;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   color: white;
   position: absolute;
   bottom: 0px;
+  cursor: pointer;
 }
 .card-label{
   width: 150px;
@@ -503,6 +506,11 @@ body {
   border-radius: 7px;
   margin: 0px;
 }
+.resume{
+  width: 90%;
+  height: 600px;
+  background-color: black;
+}
 /* Keyframes for floating animation */
 @keyframes float {
   0% {
@@ -660,5 +668,14 @@ body {
   }
   .cert-image{
     width: 250px;
+  }
+  .view-prj{
+    display: none;
+  }
+  .prj{
+    height: 380px;
+  }
+  .projects-container{
+    grid-template-rows:380px 380px;
   }
 }
