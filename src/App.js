@@ -222,7 +222,7 @@ function App() {
           <div className='projects'>
             <div className='project-preview'>
               <p style={{ fontFamily: 'poppins', marginLeft: '30px', textAlign: 'left', width: '90%' }}>Working on projects in my most liked work. I do spend lot of the time developing the Solutions on the problems I see around me. Some of my works are below.</p>
-              <div className="projects-container" style={{gridTemplateColumns : selectedProject != null ? '300px 300px' : '300px 300px 300px'}}>
+              <div className="projects-container" style={{gridTemplateColumns: window.innerWidth < '500px' ? '300px 300px' : selectedProject != null ? '300px 300px': '300px 300px 300px'}}>
                 {ProjectsData.projects.map((projects, index) => (
                   <ProjectCards 
                       key={index} 
