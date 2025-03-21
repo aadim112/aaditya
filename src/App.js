@@ -195,11 +195,11 @@ function App() {
               <div className='stat'>
                 <div className='total-questions'>
                   <p>Total Question</p>
-                  <h2>59</h2>
+                  <h2>73</h2>
                 </div>
                 <div className='total-questions'>
                 <p>Total Active day</p>
-                <h2>30</h2>
+                <h2>45</h2>
                 </div>
                 <div className='DAS-topics'>
                   <p style={{marginLeft:'20px',fontFamily:'Poppins',color:'grey',fontWeight:'bold',marginBottom:'0px'}}>DSA Topics Analysis</p>
