@@ -1,27 +1,30 @@
 {
   "files": {
-    "main.css": "/aaditya/static/css/main.192acdda.css",
-    "main.js": "/aaditya/static/js/main.96ece435.js",
+    "main.css": "/aaditya/static/css/main.5755c4ec.css",
+    "main.js": "/aaditya/static/js/main.37f82441.js",
     "static/js/488.8515a8b3.chunk.js": "/aaditya/static/js/488.8515a8b3.chunk.js",
+    "static/media/medilog.png": "/aaditya/static/media/medilog.1ff0ed9fc315f644c7ae.png",
+    "static/media/arduino.png": "/aaditya/static/media/arduino.485674b11270c012a070.png",
+    "static/media/rentpar.png": "/aaditya/static/media/rentpar.5c17c681d31c697cc50a.png",
     "static/media/frame.png": "/aaditya/static/media/frame.7d0cdf0ba4793732620c.png",
     "static/media/python hackerRank.png": "/aaditya/static/media/python hackerRank.5a2bfc1baab5d017d445.png",
     "static/media/python.png": "/aaditya/static/media/python.8217fd7868d8d73d5455.png",
     "static/media/html.png": "/aaditya/static/media/html.4d32bb5540087e8fde4d.png",
-    "static/media/Resume.pdf": "/aaditya/static/media/Resume.66ce16a7bb12453bfc48.pdf",
     "static/media/canteen.png": "/aaditya/static/media/canteen.ee2e7b79ce56fc8b9a0c.png",
-    "static/media/portfolio.png": "/aaditya/static/media/portfolio.243824cad4c41dc45ce1.png",
     "static/media/c++ devtown.png": "/aaditya/static/media/c++ devtown.8d399e85f86c4ea7f08e.png",
+    "static/media/portfolio.png": "/aaditya/static/media/portfolio.cd334238ce89353d4740.png",
     "static/media/profile.jpg": "/aaditya/static/media/profile.c29180d23efb2843f47e.jpg",
+    "static/media/Resume.pdf": "/aaditya/static/media/Resume.d838fb41fa8fd8ffb9c1.pdf",
     "static/media/Accomodation.png": "/aaditya/static/media/Accomodation.5fb8a0d876bb34527004.png",
     "static/media/javascript.jpg": "/aaditya/static/media/javascript.7ad7c9ece8f015cadfad.jpg",
     "static/media/logo.svg": "/aaditya/static/media/logo.6ce24c58023cc2f8fd88.svg",
     "index.html": "/aaditya/index.html",
-    "main.192acdda.css.map": "/aaditya/static/css/main.192acdda.css.map",
-    "main.96ece435.js.map": "/aaditya/static/js/main.96ece435.js.map",
+    "main.5755c4ec.css.map": "/aaditya/static/css/main.5755c4ec.css.map",
+    "main.37f82441.js.map": "/aaditya/static/js/main.37f82441.js.map",
     "488.8515a8b3.chunk.js.map": "/aaditya/static/js/488.8515a8b3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.192acdda.css",
-    "static/js/main.96ece435.js"
+    "static/css/main.5755c4ec.css",
+    "static/js/main.37f82441.js"
   ]
 }
