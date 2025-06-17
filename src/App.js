@@ -220,6 +220,10 @@ function App() {
                 <p>Total Active day</p>
                 <h2>73</h2>
                 </div>
+                <div className='total-questions'>
+                <p>Total Active day</p>
+                <h2>45</h2>
+                </div>
                 <div className='DAS-topics'>
                   <p style={{marginLeft:'20px',fontFamily:'Poppins',color:'grey',fontWeight:'bold',marginBottom:'0px'}}>DSA Topics Analysis</p>
                   <div className='topics'>
