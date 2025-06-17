@@ -1,5 +1,6 @@
 body {
   padding: 0px 0px 0px;
+  padding-bottom: 30px;
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -23,7 +24,6 @@ body {
 }
 .static-layout {
   width: 20%;
-  height: 500px;
 }
 .dynamic-layout {
   width: 100%;
@@ -47,12 +47,10 @@ body {
   border-radius: 2px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .image-container {
   width: 25%;
-  height: 80%;
-  background-color: #f0f0f0;
+  height: 90%;
   border-radius: 2px;
 }
 .about-container {
@@ -61,11 +59,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-right: 20px;
 }
 .about {
   width: 100%;
   height: 350px;
   background-color: #1f0538;
+  border-radius: 15px;
+  padding: 10px;
 }
 .about-stats {
   width: 70%;
@@ -185,6 +186,7 @@ body {
   font-size: 15px;
   border-radius: 8px;
   cursor: pointer;
+  padding-left: 10px;
 }
 .icon {
   width: 30px;
@@ -345,12 +347,9 @@ body {
   margin-left: 10px;
 }
 .tec-knowledge{
-  width: 60%;
   height: 80%;
   background-size:auto;
   background-repeat: repeat;
-  border-radius: 7px;
-  margin-left: 30px;
 }
 .tec-kn-container{
   width: 100% ;
@@ -507,9 +506,9 @@ body {
   margin: 0px;
 }
 .resume{
-  width: 90%;
-  height: 600px;
-  background-color: black;
+  width: 100%;
+  height: 1000px;
+  margin-top: 30px;
 }
 .projects-container.selected {
   grid-template-columns: 300px 300px;
@@ -624,7 +623,7 @@ body {
     justify-content:  space-around;
   }
   .stat-label{
-  bottom: 100px;
+  bottom: 175px;
   position: absolute;
   right: 30px;
   }
@@ -638,8 +637,13 @@ body {
   }
   .cards{
     margin: 0px;
-    height: auto;
+    height: auto ;
     display: block;
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+  .tec-knowledge{
+    margin-left: 10px;
   }
   .tec-container{
     margin-top: 50px;
@@ -702,4 +706,178 @@ body {
     border-radius: 8px;
     cursor: pointer;
   }
+}
+
+
+
+/* Dark Mode styles */
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.dark-mode .dynamic-layout {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.dark-mode .card-label{
+  box-shadow: 5px 5px 0px white;
+}
+
+.dark-mode .opt {
+  color: #ffffff;
+}
+
+.dark-mode .opt:hover {
+  background-color: #3d3d3d;
+}
+
+.dark-mode .about {
+  background-color: #2d2d2d !important;
+}
+
+.dark-mode .cards {
+  background-color: #333333;
+  box-shadow: 7px 7px 0px #555555;
+}
+
+.dark-mode .total-questions {
+  background-color: #2d2d2d;
+}
+
+.dark-mode .DAS-topics {
+  background-color: #2d2d2d;
+}
+
+.dark-mode .certficate-card {
+  background-color: #2d2d2d;
+}
+
+.dark-mode .find-me p {
+  color: #ffffff !important;
+}
+
+.dark-mode .find-me:hover p {
+  color: #FFD524 !important;
+}
+
+.dark-mode h2 {
+  color: #cccccc !important;
+}
+
+.dark-mode p {
+  color: white !important;
+}
+
+/* Rope styles */
+.rope-container {
+  position: fixed;
+  right: 10px;
+  z-index: 1000;
+  height: 200px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rope-mount {
+  width: 20px;
+  height: 10px;
+  background-color: #8B4513;
+}
+
+.rope {
+  width: 8px;
+  background: linear-gradient(45deg, #D2691E 25%, #CD853F 25%, #CD853F 50%, #D2691E 50%, #D2691E 75%, #CD853F 75%);
+  background-size: 8px 8px;
+  cursor: grab;
+  transition: transform 0.3s ease;
+  transform-origin: top;
+  position: relative;
+  margin-top: 2px;
+}
+
+.rope:active {
+  cursor: grabbing;
+}
+
+.rope-segments {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rope-segment {
+  flex: 1;
+  border-bottom: 1px solid #A0522D;
+}
+
+.light-bulb {
+  font-size: 24px;
+  margin-top: 5px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 0, 0.5));
+  user-select: none;
+}
+
+.dark-mode .light-bulb {
+  filter: drop-shadow(0 0 5px rgba(255, 255, 0, 0.2));
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .rope-container {
+    right: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .rope-container {
+    right: 15px;
+    top: 15px;
+  }
+  
+  .light-bulb {
+    font-size: 20px;
+  }
+}
+
+/* Smooth transitions for dark mode */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Override some original styles for better dark mode compatibility */
+.layout {
+  transition: background-color 0.3s ease;
+}
+
+.opt {
+  transition: all 0.3s ease;
+}
+
+/* Additional dark mode improvements */
+.dark-mode .stats {
+  border-color: #555555;
+}
+
+.dark-mode .topic-div {
+  border-bottom-color: #555555;
+}
+
+.dark-mode .view-prj {
+  background-color: #444444;
+}
+
+.dark-mode .git-link {
+  background-color: #333333;
+}
+.dark-mode .card-label p{
+  color: black;
+}
+.dark-mode .about-heading{
+  color: #FFD524;
 }

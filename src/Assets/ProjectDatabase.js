@@ -13,32 +13,32 @@ const ProjectsData = {
             "description": "A web application to work as online food serving for college. This web-app was designed to reduce waiting time, crowd and decrease food wastagel. This web-app also has functionality to book the table at the canteen site.",
             "technologies": ["HTML", "API", "CSS","Flask","SQLite Database"],
             "link": "./Assets/projectsimage/canteen.png",
-            "summary": "A web application to work as online food serving for college.",
-            "gitlink" :'abc.com'
-        },
-        {
-            "title": "Email Assistant",
-            "description": "Email Assistant is an app to assist with daily emails and meeting mentioned inside the email. As this app fetches the email using simple gmail lebrary and then process it using the google transformation model. It also detects for the meetings mentioned in the emails and plot this meetings on the calender.",
-            "technologies": ["ReactNative","FLask API", "Simplegmail", "Google Auth2.O"],
-            "summary": "An application to manage and organize emails and meetings and assist with the daily schedule.",
-            "link": "./Assets/projectsimage/canteen.png",
-            "gitlink" :'abc.com'
+            "summary": "Web Apllication for providing platform for canteens to establish online menu and transactions.",
+            "gitlink" :'https://github.com/aadim112/Canteen-Website'
         },
         {
             "title" : "Home Assistant using Arduino",
             "description":"Home Assistant devloped using Arduino and various other modules. In this project we use google speech recognition to get the commands from the user and send the signal to the ardino using bluetooth module. We also created an app to manage various applications connected to the arduino and the app was build using logic blocks.",
             "technologies" : ["C++","Python","Speech Recognition"],
             "summary" : "An Arduino based project to controll varios home appliances.",
-            "link":"./Assets/projectsimage/Accomodation.png",
-            "gitlink" : 'anb.com'
+            "link":"./Assets/projectsimage/arduino.png",
+            "gitlink" : 'https://github.com/aadim112/Home-Assistant'
         },
         {
-            "title" : "Accomodation Website",
-            "description":"Accomodation website is devloped to convinently find the accomodations for students near the educational institute.This website also has feature to find the member for the accomodation if any accomodation have vacency. This website offers various features such as rating for accomodation and knew the facilities available in the accomodation.",
-            "technologies" : ["React","firebase","Google Login"],
-            "summary" : "Accomodation is website for finding the best accomodation near the educational institutes.",
-            "link":"./Assets/projectsimage/Accomodation.png",
-            "gitlink" : 'anb.com'
+            "title" : "Hospital Management(Medilog)",
+            "description":"MEDILOG is a web-based platform designed to streamline the interaction between doctors and patients by offering an efficient appointment booking system, patient records management, and a user-friendly interface.Simple and intuitive UI for seamless navigation.Patients can book appointments online based on doctor availability.Doctors can search and access patient history easily.Fully optimized for mobile, tablet, and desktop users.Patient information is stored securely using Firebase.Doctors can prescribe medicines, and inventory updates in real-time.",
+            "technologies" : ["React.js","firebase","Googe Gemini",'Google Authentication'],
+            "summary" : "streamline the interaction between Hospital Staff and globalise the patient data ",
+            "link":"./Assets/projectsimage/medilog.png",
+            "gitlink" : 'https://github.com/aadim112/HM0055_Code200'
+        },
+        {
+            "title" : "Parking Space detection and booking for(RentPar)",
+            "description":"RentPar is a website that helps you find parking location near to your destination. This is useful when you enter such place where finding best parking is difficult. This website helps you find free as well as paid space to park your vehicle.The site takes your destination co-ordinates and searches for the nearby co-ordinates in the database of the parking space and list those spaces on the site.User can select the spaces among the listed places and book the space by paying the fee for given amount of time in case if the space registered is free or paid.",
+            "technologies" : ["React.js","firebase","Mapbox",'GoogeAuth',"HerweGo"],
+            "summary" : "Web Solution to find parking location near destination place and public places",
+            "link":"./Assets/projectsimage/rentpar.png",
+            "gitlink" : 'https://github.com/aadim112/RentPar'
         },
     ],
     "certifications": [
@@ -71,7 +71,7 @@ const ProjectsData = {
             "platform":"HackerRank",
             "credential":'62C60659914C',
             "link":"./Assets/certificateimage/python hackerRank.png"
-        }
+        },
     ]
 }
 

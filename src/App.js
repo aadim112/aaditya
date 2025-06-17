@@ -5,6 +5,7 @@ import 'aos/dist/aos.css';
 import ProjectsData from './Assets/ProjectDatabase'
 import profileImage from './Assets/profile.jpg'
 import Resume from './Assets/Resume.pdf'
+import LightBulbToggle from './LightBulbToggle';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
   const w = [0,1,2,3]
   const [window,setWindow] = useState(0);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [isDarkMode, setIsDarkMode] = useState(false); // Keep this state
 
 
   const handleWindow = (e) => {
@@ -33,7 +35,15 @@ function App() {
       });
     }, []);
 
-
+    // Apply dark mode class to body
+    useEffect(() => {
+      if (isDarkMode) {
+        document.body.classList.add('dark-mode');
+      } else {
+        document.body.classList.remove('dark-mode');
+      }
+    }, [isDarkMode]);
+    
     // ////////////////////////////////////////////////////Components Here
     const ProjectOverview = ({SelectedProject}) => {
       if (!SelectedProject) return null;
@@ -50,7 +60,7 @@ function App() {
             ))}
           </div>
           <p style={{fontFamily:'poppins'}}>{SelectedProject.description}</p>
-          <a href={SelectedProject.link} style={{textDecoration:'none'}}><div className='git-link'>
+          <a href={SelectedProject.gitlink} style={{textDecoration:'none'}}><div className='git-link'>
             <i class="fa-brands fa-github fa-lg" style={{color: '#ffffff'}}></i>
             <p>Github</p>
           </div></a>
@@ -97,8 +107,9 @@ function App() {
     };
     /////////////////////////////////////////////////////////Components End/////////////
 
-  return (
-    <div className="layout">
+    return (
+    <div className={`layout ${isDarkMode ? 'dark-mode' : ''}`}>
+      <LightBulbToggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <div className="static-layout">
         <div className="options">
           <div className="opt" onClick={ () => {handleWindow(0)}}><i className="fa-regular fa-address-card fa-lg"></i><p>About</p></div>
@@ -118,13 +129,13 @@ function App() {
                 </div>
                 <div className="about-container">
                   <div className="about">
-                    <p style={{ color: '#FFD524', marginLeft: '20px', fontFamily: 'Poppins', fontWeight: 300, fontSize: '20px', marginBottom: '0px'}}>Welcome to my little corner of the web</p>
-                    <p style={{ marginLeft: '20px', fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>Hello, I am Aditya Patil student at Dr. D. Y. Patil Institute of Engineering, Management and Research, Pune</p>
-                    <p style={{ marginLeft: '20px', fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>I always try to seek for solution any technical problems. I love to solve this issues
-                      using my technical skills and learn them whenever needed.I have varius projects in my bucket which were devloped to solve such problems.
+                    <p className='about-heading' style={{ color: '#FFD524', fontFamily: 'Poppins', fontWeight: 300, fontSize: '20px', marginBottom: '0px',marginTop:'10px'}}>Welcome to my little corner of the web</p>
+                    <p style={{fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>Hello, I am Aditya Patil student at Dr. D. Y. Patil Institute of Engineering, Management and Research, Pune</p>
+                    <p style={{fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>I always try to create solution on noticed problems. I love to solve those issues
+                      using my technical skills and learn new technologies whenever needed.I have varius projects in my bucket which are developed in order to solve such problems.
                     </p>
-                    <p style={{ marginLeft: '20px', fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>I have good knowledge of website development and deployment. Many of my project use web platform. Currently I am studying about Machine Learning and Advance Machine Learning concepts.</p>
-                    <p style={{ marginLeft: '20px', fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>Apart from technical things I like to play video games as they are entertaining also they impove reflexes and increases fast decision making power.</p>
+                    <p style={{fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>I have been doing web-development since 3 years and have good expertise. Many of my project are web platform based. Currently I am studying about Machine Learning and Advance Machine Learning concepts.</p>
+                    <p style={{fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>Apart from technical things I like to play video games as they are entertaining also they impove reflexes and increases fast decision making power.</p>
                   </div>
                 </div>
               </div>
@@ -146,8 +157,12 @@ function App() {
               <a href='https://codolio.com/profile/Aaditya' style={{textDecoration:'none'}}><p style={{color:'black'}}>Codolio</p></a>
             </div>
             <div className="find-me">
-              <i className="fa-brands fa-linkedin fa-lg" style={{ color: 'rgba(25, 102, 204, 0.7)' }}></i>
+              <i className="fa-brands fa-linkedin fa-lg" style={{ color: 'rgba(25, 102, 204, 0.7)',scale:'1.2 ' }}></i>
               <a href='https://www.linkedin.com/in/adityapatilm/' style={{textDecoration:'none'}}><p style={{color:'black'}}>Linkedin</p></a>
+            </div>
+            <div className="find-me">
+              <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/189_Kaggle_logo_logos-512.png" style={{ width: '30px', height: '30px',scale:'0.8' }} />
+              <a href='https://www.kaggle.com/aaditya112' style={{textDecoration:'none'}}><p style={{color:'black'}}>Kaggle</p></a>
             </div>
           </div>
           <p style={{ fontFamily: 'poppins', color: 'black', marginLeft: '30px', fontSize: '20px', fontWeight: 'bold' }}>Know my cards</p>
@@ -175,6 +190,10 @@ function App() {
                   <img src='https://cdn.worldvectorlogo.com/logos/flask.svg'></img>
                   <p>Flask</p>
                 </div>
+                <div className='tech'>
+                  <img src='https://cdn.worldvectorlogo.com/logos/pytorch-2.svg' style={{scale:'2.2'}}></img>
+                  
+                </div>
               </div>
               <div className='tec-knowledge'>
                 <p style={{fontFamily:'Noto Serif JP',textAlign:'left',margin:'0px',fontSize:'19px'}}>Projects with the tech stack</p>
@@ -195,19 +214,19 @@ function App() {
               <div className='stat'>
                 <div className='total-questions'>
                   <p>Total Question</p>
-                  <h2>59</h2>
+                  <h2>106</h2>
                 </div>
                 <div className='total-questions'>
                 <p>Total Active day</p>
-                <h2>30</h2>
+                <h2>73</h2>
                 </div>
                 <div className='DAS-topics'>
                   <p style={{marginLeft:'20px',fontFamily:'Poppins',color:'grey',fontWeight:'bold',marginBottom:'0px'}}>DSA Topics Analysis</p>
                   <div className='topics'>
-                    <Bargraph w={20} tp = 'Array'/>
-                    <Bargraph w={8} tp = 'Sorting'/>
-                    <Bargraph w={8} tp ='Greedy Algorithm'/>
-                    <Bargraph w={7} tp ='String'/>
+                    <Bargraph w={39} tp = 'Array'/>
+                    <Bargraph w={13} tp = 'Sorting'/>
+                    <Bargraph w={10} tp ='Greedy Algorithm'/>
+                    <Bargraph w={10} tp ='Binary Tree'/>
                     <div style={{width:'100%',height:'30px',alignItems:'center',justifyContent:'center',display:'flex',fontFamily:'poppins',fontSize:'12px',marginTop:'10px'}}>show more</div>
                   </div>
                 </div>
@@ -254,7 +273,9 @@ function App() {
           </div>
         </div>
         <div className="resume" style={{display:window === 3 ? 'block' : 'none'}}>
-          <embed src={Resume} style={{width:'100%',height:'100%'}}/>
+          <div style={{width:'100%',height:'1000px',display:'flex',alignItems:'center',justifyContent:'center'}}>
+            <iframe src={Resume} style={{width:'100%',height:'1000px',outline:'none',border:'0px'}}/>
+          </div>
         </div>
       </div>
     </div>
