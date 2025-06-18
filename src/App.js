@@ -13,9 +13,18 @@ import flaskDarkMode from './Assets/flaskDarkMode.png'
 function App() {
 
   const w = [0,1,2,3]
-  const [window,setWindow] = useState(0);
+  const [windowWidth,setWindow] = useState(0);
   const [selectedProject, setSelectedProject] = useState(null);
   const [isDarkMode, setIsDarkMode] = useState(false); // Keep this state
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 500);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 500);
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
 
 
   const handleWindow = (e) => {
@@ -123,7 +132,7 @@ function App() {
         </div>
         <div className="dynamic-layout" id="dynamic">
           <p style={{fontFamily:'Poppins',fontSize:'35px',marginBottom:'0px',fontWeight:'bold',marginLeft:'30px'}}>Aditya M Patil</p>
-          <div className="home" style={{display:window === 0 ? 'block' : 'none'}}>
+          <div className="home" style={{display:windowWidth === 0 ? 'block' : 'none'}}>
           <h2 style={{ fontFamily: 'Poppins', marginLeft: '30px', color:'grey'}}>Home</h2>
               <div className="banner-container">
                 <div className="banner">
@@ -242,12 +251,12 @@ function App() {
           </div>
 
           {/* Here will be the projects */}
-          <div className="project-tab" style={{display:window === 1 ? 'block' : 'none'}}>
+          <div className="project-tab" style={{display:windowWidth === 1 ? 'block' : 'none'}}>
           <h2 style={{ fontFamily: 'Poppins', marginLeft: '30px',color:'grey'}}>Projects</h2>
             <div className='projects'>
               <div className='project-preview'>
-                <p style={{ fontFamily: 'poppins', marginLeft: '30px', textAlign: 'left', width: '90%' }}>Working on projects in my most liked work. I do spend lot of the time developing the Solutions on the problems I see around me. Some of my works are below.</p>
-                <div className="projects-container" style={{gridTemplateColumns: window.innerWidth < '500px' ? '300px 300px' : selectedProject != null ? '300px 300px': '300px 300px 300px'}}>
+                <p className='project-preview-heading'>Working on projects in my most liked work. I do spend lot of the time developing the Solutions on the problems I see around me. Some of my works are below.</p>
+                <div className={isMobile? 'projects-container mobile-layout': selectedProject? 'projects-container three-': 'projects-container two-columns'}>
                   {ProjectsData.projects.map((projects, index) => (
                     <ProjectCards 
                         key={index} 
@@ -259,10 +268,10 @@ function App() {
                   ))}
                 </div>
               </div>
-              <ProjectOverview SelectedProject={selectedProject}/>
+              <ProjectOverview SelectedProject={selectedProject || ProjectsData.projects[0]} />
             </div>
           </div>
-          <div className="Certification" style={{display:window === 2 ? 'block' : 'none'}}>
+          <div className="Certification" style={{display:windowWidth === 2 ? 'block' : 'none'}}>
             <h2 style={{ fontFamily: 'Poppins', marginLeft: '30px',color:'grey'}}>Certifications</h2>
             <p style={{ fontFamily: 'poppins', marginLeft: '30px', textAlign: 'left', width: '90%' }}>Below are some of my certifications from some of the well-known websites and competitive websites.</p>
             <div className='certificate-container'>
@@ -278,7 +287,7 @@ function App() {
               ))}
             </div>
           </div>
-          <div className="resume" style={{display:window === 3 ? 'block' : 'none'}}>
+          <div className="resume" style={{display:windowWidth === 3 ? 'block' : 'none'}}>
             <h2 style={{ fontFamily: 'Poppins', marginLeft: '30px',color:'grey'}}>Resume</h2>
             <div style={{width:'80%',height:'1000px',display:'flex',alignItems:'center',justifyContent:'center',marginLeft:'30px'}}>
               <iframe src={Resume} style={{width:'100%',height:'1000px',outline:'none',border:'0px'}}/>

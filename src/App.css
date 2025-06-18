@@ -202,17 +202,27 @@ body {
 .projects{
   display: flex;
 }
-.certification {
-
-}
 .projects-container {
-  width: auto;
-  height: auto;
   display: grid;
-  grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 500px 500px auto;
   margin-left: 30px;
+  gap: 16px;
+  grid-template-columns: 300px 300px;
 }
+
+.projects-container.three-columns {
+  grid-template-columns: 300px 300px 300px;
+}
+
+.projects-container.two-columns {
+  margin: 15px;
+  grid-template-columns: 300px 300px;
+}
+
+.projects-container mobile-layout {
+  grid-template-columns: 300px 300px;
+  margin: 15px;
+}
+
 .project-overview{
   width: 1000px;
   height: auto;
@@ -288,6 +298,11 @@ body {
   color: rgb(68, 68, 68);
   margin-bottom: 0px;
   width: 80%;
+}
+.project-preview-heading{
+  font-family: poppins;
+  margin-left: 30px;
+  width: 90%;
 }
 .view-prj {
   width: 86%;
@@ -512,6 +527,29 @@ body {
 .projects-container.selected {
   grid-template-columns: 300px 300px;
 }
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
 /* Keyframes for floating animation */
 @keyframes float {
   0% {
@@ -605,9 +643,10 @@ body {
   .cert-image{
     width: 250px;
   }
-  .projects-container{
-    grid-template-columns: 300px 300px;
-    grid-template-rows:380px 380px;
+  .project-preview-heading{
+    width: 520px;
+    margin-left: 30px;
+    height: auto;
   }
 }
 
@@ -676,6 +715,9 @@ body {
     justify-content: start;
     margin-left: 30px;
   }
+  .view-prj{
+    display: none;
+  }
   .certificate-container{
     height: auto;
     grid-template-columns: 280px auto;
@@ -689,9 +731,6 @@ body {
   .cert-image{
     width: 250px;
   }
-  .view-prj{
-    display: none;
-  }
   .prj{
     height: 380px;
   }
@@ -699,9 +738,10 @@ body {
     width: auto;
     height: auto;
     display: grid;
-    grid-template-columns: 300px 300px;
-    grid-template-rows:380px 380px auto;
+    margin: 15px;
+    grid-template-columns:300px 300px;
   }
+
   .opt{
     width: 100%;
     height: 50px;
