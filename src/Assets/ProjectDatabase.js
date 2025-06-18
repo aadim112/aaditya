@@ -33,12 +33,20 @@ const ProjectsData = {
             "gitlink" : 'https://github.com/aadim112/HM0055_Code200'
         },
         {
-            "title" : "Parking Space detection and booking for(RentPar)",
+            "title" : "Parking Space detection and booking(RentPar)",
             "description":"RentPar is a website that helps you find parking location near to your destination. This is useful when you enter such place where finding best parking is difficult. This website helps you find free as well as paid space to park your vehicle.The site takes your destination co-ordinates and searches for the nearby co-ordinates in the database of the parking space and list those spaces on the site.User can select the spaces among the listed places and book the space by paying the fee for given amount of time in case if the space registered is free or paid.",
             "technologies" : ["React.js","firebase","Mapbox",'GoogeAuth',"HerweGo"],
             "summary" : "Web Solution to find parking location near destination place and public places",
             "link":"./Assets/projectsimage/rentpar.png",
             "gitlink" : 'https://github.com/aadim112/RentPar'
+        },
+        {
+            "title" : "(CMate) AI Dictation & Assignment Tool",
+            "description":"AI-powered educational platform to assist students in completing academic tasks efficiently. It features an AI Dictator that reads out assignment answers in a human-like voice and an Assignment Generator that produces notes and diagrams with customizable answer lengths. CMate also includes an interactive contest section, allowing students to participate in or view real-time academic challenges. Built with React.js, Firebase, Flask, Google Authentication, Cloudinary, and the Google Gemini API, CMate combines intelligent content generation with engaging student experiences.",
+            "technologies" : ["React.js","firebase","Flask",'GoogeAuth',"Cloudnary","GeminiAPI"],
+            "summary" : "AI Dictator and Assignment Generator(CMate)An AI that can dictate the student like a human and can provide you the notes and diagrams for the assigment with customisable answer length.",
+            "link":"./Assets/projectsimage/cmate.png",
+            "gitlink" : 'https://github.com/aadim112/CMate'
         },
     ],
     "certifications": [

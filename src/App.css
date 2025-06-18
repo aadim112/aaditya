@@ -1,6 +1,5 @@
 body {
   padding: 0px 0px 0px;
-  padding-bottom: 30px;
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -536,8 +535,9 @@ body {
     display: block;
   }
   .static-layout{
-    width: 100%;
+    width: 90%;
     height: auto;
+    margin-left: 60px;
   }
   .left-controlle{
     width: 100%;
@@ -582,6 +582,15 @@ body {
   }
   .stats{
     margin-top: 50px;
+  }
+  .topic-div{
+    width: 80%;
+  }
+  .DAS-topics{
+    width: 280px;
+  }
+  .topics{
+    width: 100%;
   }
   .certificate-container{
     height: auto;

@@ -6,6 +6,8 @@ import ProjectsData from './Assets/ProjectDatabase'
 import profileImage from './Assets/profile.jpg'
 import Resume from './Assets/Resume.pdf'
 import LightBulbToggle from './LightBulbToggle';
+import pytorchDarkMode from './Assets/PyTorchDarkMode.png'
+import flaskDarkMode from './Assets/flaskDarkMode.png'
 
 
 function App() {
@@ -108,181 +110,186 @@ function App() {
     /////////////////////////////////////////////////////////Components End/////////////
 
     return (
-    <div className={`layout ${isDarkMode ? 'dark-mode' : ''}`}>
-      <LightBulbToggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-      <div className="static-layout">
-        <div className="options">
-          <div className="opt" onClick={ () => {handleWindow(0)}}><i className="fa-regular fa-address-card fa-lg"></i><p>About</p></div>
-          <div className="opt" onClick={ () => {handleWindow(1)}}><i className="fa-solid fa-laptop fa-lg"></i><p>Projects</p></div>
-          <div className="opt" onClick={ () => {handleWindow(2)}}><i class="fa-solid fa-trophy fa-lg"></i><p>Certifications</p></div>
-          <div className="opt" onClick={ () => {handleWindow(3)}}><i className="fa-solid fa-file fa-lg"></i><p>CV/Resume</p></div>
+    <>
+      <div className={`layout ${isDarkMode ? 'dark-mode' : ''}`}>
+        <LightBulbToggle isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+        <div className="static-layout">
+          <div className="options">
+            <div className="opt" onClick={ () => {handleWindow(0)}}><i className="fa-regular fa-address-card fa-lg"></i><p>About</p></div>
+            <div className="opt" onClick={ () => {handleWindow(1)}}><i className="fa-solid fa-laptop fa-lg"></i><p>Projects</p></div>
+            <div className="opt" onClick={ () => {handleWindow(2)}}><i class="fa-solid fa-trophy fa-lg"></i><p>Certifications</p></div>
+            <div className="opt" onClick={ () => {handleWindow(3)}}><i className="fa-solid fa-file fa-lg"></i><p>CV/Resume</p></div>
+          </div>
         </div>
-      </div>
-      <div className="dynamic-layout" id="dynamic">
-        <p style={{fontFamily:'Poppins',fontSize:'35px',marginBottom:'0px',fontWeight:'bold',marginLeft:'30px'}}>Aditya M Patil</p>
-        <div className="home" style={{display:window === 0 ? 'block' : 'none'}}>
-        <h2 style={{ fontFamily: 'Poppins', marginLeft: '30px', color:'grey'}}>Home</h2>
-            <div className="banner-container">
-              <div className="banner">
-                <div className="image-container">
-                  <img src={profileImage} alt="image" width="100%" height="100%" style={{objectFit:'cover',borderRadius:'8px'}}/>
+        <div className="dynamic-layout" id="dynamic">
+          <p style={{fontFamily:'Poppins',fontSize:'35px',marginBottom:'0px',fontWeight:'bold',marginLeft:'30px'}}>Aditya M Patil</p>
+          <div className="home" style={{display:window === 0 ? 'block' : 'none'}}>
+          <h2 style={{ fontFamily: 'Poppins', marginLeft: '30px', color:'grey'}}>Home</h2>
+              <div className="banner-container">
+                <div className="banner">
+                  <div className="image-container">
+                    <img src={profileImage} alt="image" width="100%" height="100%" style={{objectFit:'cover',borderRadius:'8px'}}/>
+                  </div>
+                  <div className="about-container">
+                    <div className="about">
+                      <p className='about-heading' style={{ color: '#FFD524', fontFamily: 'Poppins', fontWeight: 300, fontSize: '20px', marginBottom: '0px',marginTop:'10px'}}>Welcome to my little corner of the web</p>
+                      <p style={{fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>Hello, I am Aditya Patil student at Dr. D. Y. Patil Institute of Engineering, Management and Research, Pune</p>
+                      <p style={{fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>I always try to create solution on problems I notice. I love to solve those issues
+                        using my technical skills and learn new technologies whenever needed. I have various projects in my bucket which are developed in order to solve such problems.
+                      </p>
+                      <p style={{fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>I have been doing web-development since 3 years and have good expertise in it. Many of my project are web platform based. Currently I am studying about Machine Learning and Advance Machine Learning concepts.</p>
+                      <p style={{fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>Apart from technical things I like to play video games as they are entertaining also they impove reflexes and increases fast decision making power.</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="about-container">
-                  <div className="about">
-                    <p className='about-heading' style={{ color: '#FFD524', fontFamily: 'Poppins', fontWeight: 300, fontSize: '20px', marginBottom: '0px',marginTop:'10px'}}>Welcome to my little corner of the web</p>
-                    <p style={{fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>Hello, I am Aditya Patil student at Dr. D. Y. Patil Institute of Engineering, Management and Research, Pune</p>
-                    <p style={{fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>I always try to create solution on noticed problems. I love to solve those issues
-                      using my technical skills and learn new technologies whenever needed.I have varius projects in my bucket which are developed in order to solve such problems.
-                    </p>
-                    <p style={{fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>I have been doing web-development since 3 years and have good expertise. Many of my project are web platform based. Currently I am studying about Machine Learning and Advance Machine Learning concepts.</p>
-                    <p style={{fontFamily: 'poppins', color: 'white', marginTop: '5px',fontSize:'13px', marginBottom:'10px'}}>Apart from technical things I like to play video games as they are entertaining also they impove reflexes and increases fast decision making power.</p>
+              </div>
+            <div className="stats">
+              <div className="stat-label">
+                <p>Find Me</p>
+              </div>
+              <div className="find-me">
+                <i className="fa-brands fa-github fa-lg" style={{ color:  isDarkMode ? 'white' : 'black' }}></i>
+                <a href='https://github.com/aadim112' style={{textDecoration:'none'}}><p  style={{color:'black'}}>Github</p></a>
+              </div>
+              <div className="find-me">
+                <img src="https://user-images.githubusercontent.com/63964149/152531278-5e01909d-0c2e-412a-8acc-4a06863c244d.png" style={{ width: '30px', height: '30px' }} />
+                <a href='https://leetcode.com/u/aadi_m/' style={{textDecoration:'none'}}><p style={{color:'black'}}>leet Code</p></a>
+              </div>
+              <div className="find-me">
+                <img src="https://codolio.com/codolio_assets/codolio.svg" style={{ width: '30px', height: '30px' }} />
+                <a href='https://codolio.com/profile/Aaditya' style={{textDecoration:'none'}}><p style={{color:'black'}}>Codolio</p></a>
+              </div>
+              <div className="find-me">
+                <i className="fa-brands fa-linkedin fa-lg" style={{ color: 'rgba(25, 102, 204, 0.7)',scale:'1.2 ' }}></i>
+                <a href='https://www.linkedin.com/in/adityapatilm/' style={{textDecoration:'none'}}><p style={{color:'black'}}>Linkedin</p></a>
+              </div>
+              <div className="find-me">
+                <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/189_Kaggle_logo_logos-512.png" style={{ width: '30px', height: '30px',scale:'0.8' }} />
+                <a href='https://www.kaggle.com/aaditya112' style={{textDecoration:'none'}}><p style={{color:'black'}}>Kaggle</p></a>
+              </div>
+            </div>
+            <p style={{ fontFamily: 'poppins', color: 'black', marginLeft: '30px', fontSize: '20px', fontWeight: 'bold' }}>Know my cards</p>
+            <div className="tech-stack">
+              <div className="cards">
+                <div className='card-label'><p>Tech Stack</p></div>
+                <div className='tec-container'>
+                  <div className='tech'>
+                    <img src='https://cdn.worldvectorlogo.com/logos/python-5.svg'></img>
+                    <p>Python</p>
+                  </div>
+                  <div className='tech'>
+                    <img src='https://cdn.worldvectorlogo.com/logos/react-2.svg'></img>
+                    <p>React</p>
+                  </div>
+                  <div className='tech'>
+                    <img src='https://cdn.worldvectorlogo.com/logos/html-1.svg'></img>
+                    <p>HTML</p>
+                  </div>
+                  <div className='tech'>
+                    <img src='https://cdn.worldvectorlogo.com/logos/css-3.svg'></img>
+                    <p>CSS</p>
+                  </div>
+                  <div className='tech'>
+                    {isDarkMode ? <img src={flaskDarkMode} style={{objectFit:'cover'}}></img> : <img src='https://cdn.worldvectorlogo.com/logos/flask.svg'></img>}
+                    <p>Flask</p>
+                  </div>
+                  <div className='tech'>
+                    {isDarkMode ? <img src={pytorchDarkMode} style={{scale:'2.2',objectFit:'contain'}}></img> : <img src='https://cdn.worldvectorlogo.com/logos/pytorch-2.svg' style={{scale:'2.2'}}></img>}
+                  </div>
+                </div>
+                <div className='tec-knowledge'>
+                  <p style={{fontFamily:'Noto Serif JP',textAlign:'left',margin:'0px',fontSize:'19px'}}>Featured Projects</p>
+                  <div className='tec-kn-container'>
+                    <br></br>
+                    <span style={{fontFamily:'poppins',fontWeight:'bold'}}>Canteen Webiste - </span><span style={{fontFamily:'Poppins'}}>Python (Backend) | HTML CSS JavaScript (Frontend) | Sqlite(Database)</span>
+                    <br></br><br></br>
+                    <span style={{fontFamily:'poppins',fontWeight:'bold'}}>Home Assistant - </span> <span style={{fontFamily:'Poppins'}}>Python (Void Recognision) | C++ (Arduino Programming)</span>
+                    <br></br><br></br>
+                    <span style={{fontFamily:'poppins',fontWeight:'bold'}}>Hospital's ERP - </span><span style={{fontFamily:'Poppins'}}>Firebase(Database) | React.js (Frontend&Backend) | GoogeAuth | GoogleGemini</span>
+                    <br></br>
+                    <div style={{background:'white',fontFamily:'Poppins',color:'black',padding:'8px',width:'100px',borderRadius:'6px',alignItems:'center',justifyContent:'center',display:'flex',marginTop:'10px'}} onClick={ () => {handleWindow(1)}}>More</div>
+                  </div>
+                </div>
+              </div>
+              <div className="cards">
+                <div className='card-label'><p>Competative</p></div>
+                <div className='stat'>
+                  <div className='total-questions'>
+                    <p>Total Question</p>
+                    <h2>106</h2>
+                  </div>
+                  <div className='total-questions'>
+                  <p>Total Active day</p>
+                  <h2>73</h2>
+                  </div>
+                  <div className='total-questions'>
+                  <p>Total Active day</p>
+                  <h2>45</h2>
+                  </div>
+                  <div className='DAS-topics'>
+                    <p style={{marginLeft:'20px',fontFamily:'Poppins',color:'grey',fontWeight:'bold',marginBottom:'0px'}}>DSA Topics Analysis</p>
+                    <div className='topics'>
+                      <Bargraph w={39} tp = 'Array'/>
+                      <Bargraph w={13} tp = 'Sorting'/>
+                      <Bargraph w={10} tp ='Greedy Algorithm'/>
+                      <Bargraph w={10} tp ='Binary Tree'/>
+                      <div style={{width:'100%',height:'30px',alignItems:'center',justifyContent:'center',display:'flex',fontFamily:'poppins',fontSize:'12px',marginTop:'10px'}}>show more</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          <div className="stats">
-            <div className="stat-label">
-              <p>Find Me</p>
-            </div>
-            <div className="find-me">
-              <i className="fa-brands fa-github fa-lg" style={{ color: 'black' }}></i>
-              <a href='https://github.com/aadim112' style={{textDecoration:'none'}}><p  style={{color:'black'}}>Github</p></a>
-            </div>
-            <div className="find-me">
-              <img src="https://user-images.githubusercontent.com/63964149/152531278-5e01909d-0c2e-412a-8acc-4a06863c244d.png" style={{ width: '30px', height: '30px' }} />
-              <a href='https://leetcode.com/u/aadi_m/' style={{textDecoration:'none'}}><p style={{color:'black'}}>leet Code</p></a>
-            </div>
-            <div className="find-me">
-              <img src="https://codolio.com/codolio_assets/codolio.svg" style={{ width: '30px', height: '30px' }} />
-              <a href='https://codolio.com/profile/Aaditya' style={{textDecoration:'none'}}><p style={{color:'black'}}>Codolio</p></a>
-            </div>
-            <div className="find-me">
-              <i className="fa-brands fa-linkedin fa-lg" style={{ color: 'rgba(25, 102, 204, 0.7)',scale:'1.2 ' }}></i>
-              <a href='https://www.linkedin.com/in/adityapatilm/' style={{textDecoration:'none'}}><p style={{color:'black'}}>Linkedin</p></a>
-            </div>
-            <div className="find-me">
-              <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/189_Kaggle_logo_logos-512.png" style={{ width: '30px', height: '30px',scale:'0.8' }} />
-              <a href='https://www.kaggle.com/aaditya112' style={{textDecoration:'none'}}><p style={{color:'black'}}>Kaggle</p></a>
-            </div>
           </div>
-          <p style={{ fontFamily: 'poppins', color: 'black', marginLeft: '30px', fontSize: '20px', fontWeight: 'bold' }}>Know my cards</p>
-          <div className="tech-stack">
-            <div className="cards">
-              <div className='card-label'><p>Tech Stack</p></div>
-              <div className='tec-container'>
-                <div className='tech'>
-                  <img src='https://cdn.worldvectorlogo.com/logos/python-5.svg'></img>
-                  <p>Python</p>
-                </div>
-                <div className='tech'>
-                  <img src='https://cdn.worldvectorlogo.com/logos/react-2.svg'></img>
-                  <p>React</p>
-                </div>
-                <div className='tech'>
-                  <img src='https://cdn.worldvectorlogo.com/logos/html-1.svg'></img>
-                  <p>HTML</p>
-                </div>
-                <div className='tech'>
-                  <img src='https://cdn.worldvectorlogo.com/logos/css-3.svg'></img>
-                  <p>CSS</p>
-                </div>
-                <div className='tech'>
-                  <img src='https://cdn.worldvectorlogo.com/logos/flask.svg'></img>
-                  <p>Flask</p>
-                </div>
-                <div className='tech'>
-                  <img src='https://cdn.worldvectorlogo.com/logos/pytorch-2.svg' style={{scale:'2.2'}}></img>
-                  
-                </div>
-              </div>
-              <div className='tec-knowledge'>
-                <p style={{fontFamily:'Noto Serif JP',textAlign:'left',margin:'0px',fontSize:'19px'}}>Projects with the tech stack</p>
-                <div className='tec-kn-container'>
-                  <br></br>
-                  <span style={{fontFamily:'poppins',fontWeight:'bold'}}>Canteen Webiste - </span><span style={{fontFamily:'Poppins'}}>Python (Backend) | HTML CSS JavaScript (Frontend) | Sqlite(Database)</span>
-                  <br></br><br></br>
-                  <span style={{fontFamily:'poppins',fontWeight:'bold'}}>Home Assistant - </span> <span style={{fontFamily:'Poppins'}}>Python (Void Recognision) | C++ (Arduino Programming)</span>
-                  <br></br><br></br>
-                  <span style={{fontFamily:'poppins',fontWeight:'bold'}}>Accomodation -  </span><span style={{fontFamily:'Poppins'}}>React(JavaScript) (Frontend) | Firebase (Database)</span>
-                  <br></br><br></br>
-                  <span style={{fontFamily:'poppins',fontWeight:'bold'}}>Portfolio Website - </span><span style={{fontFamily:'Poppins'}}>Python (Backend) | HTML CSS JavaScript (Frontend) | Sqlite(Database)</span>
-                </div>
-              </div>
-            </div>
-            <div className="cards">
-              <div className='card-label'><p>Competative</p></div>
-              <div className='stat'>
-                <div className='total-questions'>
-                  <p>Total Question</p>
-                  <h2>106</h2>
-                </div>
-                <div className='total-questions'>
-                <p>Total Active day</p>
-                <h2>73</h2>
-                </div>
-                <div className='total-questions'>
-                <p>Total Active day</p>
-                <h2>45</h2>
-                </div>
-                <div className='DAS-topics'>
-                  <p style={{marginLeft:'20px',fontFamily:'Poppins',color:'grey',fontWeight:'bold',marginBottom:'0px'}}>DSA Topics Analysis</p>
-                  <div className='topics'>
-                    <Bargraph w={39} tp = 'Array'/>
-                    <Bargraph w={13} tp = 'Sorting'/>
-                    <Bargraph w={10} tp ='Greedy Algorithm'/>
-                    <Bargraph w={10} tp ='Binary Tree'/>
-                    <div style={{width:'100%',height:'30px',alignItems:'center',justifyContent:'center',display:'flex',fontFamily:'poppins',fontSize:'12px',marginTop:'10px'}}>show more</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        {/* Here will be the projects */}
-        <div className="project-tab" style={{display:window === 1 ? 'block' : 'none'}}>
-        <h2 style={{ fontFamily: 'Poppins', marginLeft: '30px',color:'grey'}}>Projects</h2>
-          <div className='projects'>
-            <div className='project-preview'>
-              <p style={{ fontFamily: 'poppins', marginLeft: '30px', textAlign: 'left', width: '90%' }}>Working on projects in my most liked work. I do spend lot of the time developing the Solutions on the problems I see around me. Some of my works are below.</p>
-              <div className="projects-container" style={{gridTemplateColumns: window.innerWidth < '500px' ? '300px 300px' : selectedProject != null ? '300px 300px': '300px 300px 300px'}}>
-                {ProjectsData.projects.map((projects, index) => (
-                  <ProjectCards 
-                      key={index} 
-                      imgsrc={require(`${projects.link}`)} 
-                      projectName={projects.title} 
-                      ProjectSummary={projects.summary}
-                      prj = {projects}
-                  />
-                ))}
+          {/* Here will be the projects */}
+          <div className="project-tab" style={{display:window === 1 ? 'block' : 'none'}}>
+          <h2 style={{ fontFamily: 'Poppins', marginLeft: '30px',color:'grey'}}>Projects</h2>
+            <div className='projects'>
+              <div className='project-preview'>
+                <p style={{ fontFamily: 'poppins', marginLeft: '30px', textAlign: 'left', width: '90%' }}>Working on projects in my most liked work. I do spend lot of the time developing the Solutions on the problems I see around me. Some of my works are below.</p>
+                <div className="projects-container" style={{gridTemplateColumns: window.innerWidth < '500px' ? '300px 300px' : selectedProject != null ? '300px 300px': '300px 300px 300px'}}>
+                  {ProjectsData.projects.map((projects, index) => (
+                    <ProjectCards 
+                        key={index} 
+                        imgsrc={require(`${projects.link}`)} 
+                        projectName={projects.title} 
+                        ProjectSummary={projects.summary}
+                        prj = {projects}
+                    />
+                  ))}
+                </div>
               </div>
+              <ProjectOverview SelectedProject={selectedProject}/>
             </div>
-            <ProjectOverview SelectedProject={selectedProject}/>
           </div>
-        </div>
-        <div className="Certification" style={{display:window === 2 ? 'block' : 'none'}}>
-          <h2 style={{ fontFamily: 'Poppins', marginLeft: '30px',color:'grey'}}>Certifications</h2>
-          <p style={{ fontFamily: 'poppins', marginLeft: '30px', textAlign: 'left', width: '90%' }}>Below are some of my certifications from some of the well-known websites and competitive websites.</p>
-          <div className='certificate-container'>
+          <div className="Certification" style={{display:window === 2 ? 'block' : 'none'}}>
+            <h2 style={{ fontFamily: 'Poppins', marginLeft: '30px',color:'grey'}}>Certifications</h2>
+            <p style={{ fontFamily: 'poppins', marginLeft: '30px', textAlign: 'left', width: '90%' }}>Below are some of my certifications from some of the well-known websites and competitive websites.</p>
+            <div className='certificate-container'>
 
-            {ProjectsData.certifications.map((certificate,index) => (
-              <CertificateCard 
-                  key={index} 
-                  title={certificate.title} 
-                  imaglink={certificate.link} 
-                  platform={certificate.platform}  
-                  credentials={certificate.credential} 
-              />
-            ))}
+              {ProjectsData.certifications.map((certificate,index) => (
+                <CertificateCard 
+                    key={index} 
+                    title={certificate.title} 
+                    imaglink={certificate.link} 
+                    platform={certificate.platform}  
+                    credentials={certificate.credential} 
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="resume" style={{display:window === 3 ? 'block' : 'none'}}>
-          <div style={{width:'100%',height:'1000px',display:'flex',alignItems:'center',justifyContent:'center'}}>
-            <iframe src={Resume} style={{width:'100%',height:'1000px',outline:'none',border:'0px'}}/>
+          <div className="resume" style={{display:window === 3 ? 'block' : 'none'}}>
+            <h2 style={{ fontFamily: 'Poppins', marginLeft: '30px',color:'grey'}}>Resume</h2>
+            <div style={{width:'80%',height:'1000px',display:'flex',alignItems:'center',justifyContent:'center',marginLeft:'30px'}}>
+              <iframe src={Resume} style={{width:'100%',height:'1000px',outline:'none',border:'0px'}}/>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <footer style={{width:'100%',display:'flex',alignItems:'center',justifyContent:'center'}}>
+        <p>© 2025 Aditya Patil. All rights reserved.</p>
+      </footer>
+    </>
   );
 }
 
