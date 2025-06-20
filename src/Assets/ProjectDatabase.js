@@ -6,7 +6,7 @@ const ProjectsData = {
             "technologies": ["HTML", "CSS", "JavaScript","Flask"],
             "link": "./Assets/projectsimage/portfolio.png",
             "summary": "A website to display my professional portfolio and projects.",
-            "gitlink" :'abc.com'
+            "gitlink" :'https://github.com/aadim112/aaditya'
         },
         {
             "title": "Canteen Website",

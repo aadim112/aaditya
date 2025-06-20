@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/aaditya/static/css/main.e818de51.css",
+    "main.css": "/aaditya/static/css/main.61c0bd4c.css",
     "main.js": "/aaditya/static/js/main.b4ee904d.js",
     "static/js/488.8515a8b3.chunk.js": "/aaditya/static/js/488.8515a8b3.chunk.js",
     "static/media/cmate.png": "/aaditya/static/media/cmate.a8d5a64a45991a0dc910.png",
@@ -22,12 +22,12 @@
     "static/media/flaskDarkMode.png": "/aaditya/static/media/flaskDarkMode.e7365b7949dda7f2f864.png",
     "static/media/logo.svg": "/aaditya/static/media/logo.6ce24c58023cc2f8fd88.svg",
     "index.html": "/aaditya/index.html",
-    "main.e818de51.css.map": "/aaditya/static/css/main.e818de51.css.map",
+    "main.61c0bd4c.css.map": "/aaditya/static/css/main.61c0bd4c.css.map",
     "main.b4ee904d.js.map": "/aaditya/static/js/main.b4ee904d.js.map",
     "488.8515a8b3.chunk.js.map": "/aaditya/static/js/488.8515a8b3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e818de51.css",
+    "static/css/main.61c0bd4c.css",
     "static/js/main.b4ee904d.js"
   ]
 }

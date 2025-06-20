@@ -79,10 +79,10 @@ function App() {
       )
     }
 
-    const ProjectCards = ({imgsrc,projectName,ProjectSummary,prj}) => {
+    const ProjectCards = ({imgsrc,projectName,ProjectSummary,prj,github}) => {
       return (
       <div className="prj">
-        <div className='prj-img-container'><img src={imgsrc} /></div>
+        <div className='prj-img-container'><a href={github}><img src={imgsrc} /></a></div>
         <h2>{projectName}</h2>
         <p style={{ width: '80%', fontFamily: 'poppins', fontSize: '14px' }}>{ProjectSummary}</p>
         <div className="view-prj" onClick={() => {handleProject(prj)}}><p style={{ fontFamily: 'poppins', margin: '10px' }}>View</p><i className="fa-solid fa-arrow-right" style={{ color: '#ffffff', marginRight: '10px' }}></i></div>
@@ -212,7 +212,7 @@ function App() {
                     <br></br>
                     <span style={{fontFamily:'poppins',fontWeight:'bold'}}>Canteen Webiste - </span><span style={{fontFamily:'Poppins'}}>Python (Backend) | HTML CSS JavaScript (Frontend) | Sqlite(Database)</span>
                     <br></br><br></br>
-                    <span style={{fontFamily:'poppins',fontWeight:'bold'}}>Home Assistant - </span> <span style={{fontFamily:'Poppins'}}>Python (Void Recognision) | C++ (Arduino Programming)</span>
+                    <span style={{fontFamily:'poppins',fontWeight:'bold'}}>Paking Space Detection And Booking - </span> <span style={{fontFamily:'Poppins'}}>React.js | Firebase | GoogleAuth | MapBox & HereweGo SDK</span>
                     <br></br><br></br>
                     <span style={{fontFamily:'poppins',fontWeight:'bold'}}>Hospital's ERP - </span><span style={{fontFamily:'Poppins'}}>Firebase(Database) | React.js (Frontend&Backend) | GoogeAuth | GoogleGemini</span>
                     <br></br>
@@ -225,15 +225,11 @@ function App() {
                 <div className='stat'>
                   <div className='total-questions'>
                     <p>Total Question</p>
-                    <h2>106</h2>
+                    <h2>110</h2>
                   </div>
                   <div className='total-questions'>
                   <p>Total Active day</p>
-                  <h2>73</h2>
-                  </div>
-                  <div className='total-questions'>
-                  <p>Total Active day</p>
-                  <h2>45</h2>
+                  <h2>76</h2>
                   </div>
                   <div className='DAS-topics'>
                     <p style={{marginLeft:'20px',fontFamily:'Poppins',color:'grey',fontWeight:'bold',marginBottom:'0px'}}>DSA Topics Analysis</p>
@@ -264,6 +260,7 @@ function App() {
                         projectName={projects.title} 
                         ProjectSummary={projects.summary}
                         prj = {projects}
+                        github = {projects.gitlink} 
                     />
                   ))}
                 </div>
