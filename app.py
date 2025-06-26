@@ -1,33 +1,38 @@
-from flask import Flask,jsonify
+from flask import Flask, jsonify
 from bs4 import BeautifulSoup
 import requests
 
 app = Flask(__name__)
 
-@app.route('/')
-def scrape_and_return():
+def getdata():
     url = 'https://codolio.com/profile/Aaditya/card'
     headers = {
-        'User-Agent': 'Mozilla/5.0'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36'
     }
 
     response = requests.get(url, headers=headers)
-    soup = BeautifulSoup(response.content, 'html.parser')
     
-    # Get all <span> elements with the target class
+    if response.status_code != 200:
+        return {'error': f"Request failed with status code {response.status_code}"}
+
+    soup = BeautifulSoup(response.content, 'html.parser')
     spans = soup.find_all('span', class_='block text-4xl text-center')
     values = [span.get_text(strip=True) for span in spans]
 
-    # Check if we have all 4 values
     if len(values) >= 4:
-        formatted_output = {
+        return {
             'Total Questions': int(values[0]),
             'Total Days': int(values[1]),
             'Active Days': int(values[2]),
             'Total Contributions': int(values[3])
         }
-
     else:
-        formatted_output = "Failed to extract all data."
+        # Optional: log response HTML for debugging
+        with open("debug_response.html", "w", encoding="utf-8") as f:
+            f.write(response.text)
+        return {'error': 'Failed to extract all data. Check HTML structure.'}
 
-    return jsonify(formatted_output)
+@app.route('/')
+def scrape_and_return():
+    data = getdata()
+    return jsonify(data)

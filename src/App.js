@@ -22,7 +22,7 @@ function App() {
   const response = fetch('https://aaditya-qpx9.onrender.com/')
   .then(response => response.json())
   .then(data => {
-    console.log(data); // Assuming it contains the API key
+    console.log(data);
   })
   .catch(error => {
     console.error('Error fetching API key:', error);
@@ -137,7 +137,7 @@ function App() {
           <div className="options">
             <div className="opt" onClick={ () => {handleWindow(0)}}><i className="fa-regular fa-address-card fa-lg"></i><p>About</p></div>
             <div className="opt" onClick={ () => {handleWindow(1)}}><i className="fa-solid fa-laptop fa-lg"></i><p>Projects</p></div>
-            <div className="opt" onClick={ () => {handleWindow(2)}}><i class="fa-solid fa-trophy fa-lg"></i><p>Certifications</p></div>
+            <div className="opt" onClick={ () => {handleWindow(2)}}><i class="fa-solid fa-trophy fa-lg"></i><p style={{textAlign:'left'}}>Courses & Certifications</p></div>
             <div className="opt" onClick={ () => {handleWindow(3)}}><i className="fa-solid fa-file fa-lg"></i><p>CV/Resume</p></div>
           </div>
         </div>
