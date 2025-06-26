@@ -31,6 +31,3 @@ def scrape_and_return():
         formatted_output = "Failed to extract all data."
 
     return jsonify(formatted_output)
-
-if __name__ == '__main__':
-    app.run(debug=True)
