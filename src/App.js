@@ -17,8 +17,13 @@ function App() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isDarkMode, setIsDarkMode] = useState(false); // Keep this state
   const [isMobile, setIsMobile] = useState(window.innerWidth < 500);
-
-  // Fetching the API data
+  const [data,setData] = useState({
+    'Active Days': 0,
+    'Total Contributions':0,
+    'Total Days':0,
+    'Total Questions':0
+  });
+useEffect(() => {
   fetch('https://aaditya-qpx9.onrender.com/')
     .then(response => {
       if (!response.ok) {
@@ -28,10 +33,17 @@ function App() {
     })
     .then(data => {
       console.log('API Response:', data);
+      setData({
+        'Active Days': data['Active Days'],
+        'Total Contributions': data['Total Contributions'],
+        'Total Days': data['Total Days'],
+        'Total Questions': data['Total Questions'],
+      });
     })
     .catch(error => {
       console.error('Error fetching data from API:', error);
     });
+}, []); // ✅ Only run once when component mounts
 
 
   useEffect(() => {
@@ -71,7 +83,7 @@ function App() {
       }
     }, [isDarkMode]);
     
-    // ////////////////////////////////////////////////////Components Here
+
     const ProjectOverview = ({SelectedProject}) => {
       if (!SelectedProject) return null;
       return(
@@ -132,7 +144,6 @@ function App() {
         </div>
       )
     };
-    /////////////////////////////////////////////////////////Components End/////////////
 
     return (
     <>
@@ -142,7 +153,7 @@ function App() {
           <div className="options">
             <div className="opt" onClick={ () => {handleWindow(0)}}><i className="fa-regular fa-address-card fa-lg"></i><p>About</p></div>
             <div className="opt" onClick={ () => {handleWindow(1)}}><i className="fa-solid fa-laptop fa-lg"></i><p>Projects</p></div>
-            <div className="opt" onClick={ () => {handleWindow(2)}}><i class="fa-solid fa-trophy fa-lg"></i><p style={{textAlign:'left'}}>Courses & Certifications</p></div>
+            <div className="opt" onClick={ () => {handleWindow(2)}}><i class="fa-solid fa-trophy fa-lg"></i><p>Courses & Certifications</p></div>
             <div className="opt" onClick={ () => {handleWindow(3)}}><i className="fa-solid fa-file fa-lg"></i><p>CV/Resume</p></div>
           </div>
         </div>
@@ -241,19 +252,19 @@ function App() {
                 <div className='stat'>
                   <div className='total-questions'>
                     <p>Total Question</p>
-                    <h2>110</h2>
+                    <h2>{data['Total Questions']}</h2>
                   </div>
                   <div className='total-questions'>
                   <p>Total Active day</p>
-                  <h2>76</h2>
+                  <h2>{data['Total Days']}</h2>
                   </div>
                   <div className='DAS-topics'>
                     <p style={{marginLeft:'20px',fontFamily:'Poppins',color:'grey',fontWeight:'bold',marginBottom:'0px'}}>DSA Topics Analysis</p>
                     <div className='topics'>
-                      <Bargraph w={39} tp = 'Array'/>
-                      <Bargraph w={13} tp = 'Sorting'/>
-                      <Bargraph w={10} tp ='Greedy Algorithm'/>
-                      <Bargraph w={10} tp ='Binary Tree'/>
+                      <Bargraph w={45} tp = 'Array'/>
+                      <Bargraph w={16} tp = 'Sorting'/>
+                      <Bargraph w={12} tp ='Greedy Algorithm'/>
+                      <Bargraph w={12} tp ='Binary Tree'/>
                       <div style={{width:'100%',height:'30px',alignItems:'center',justifyContent:'center',display:'flex',fontFamily:'poppins',fontSize:'12px',marginTop:'10px'}}>show more</div>
                     </div>
                   </div>

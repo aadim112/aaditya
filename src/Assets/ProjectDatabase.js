@@ -80,6 +80,12 @@ const ProjectsData = {
             "credential":'62C60659914C',
             "link":"./Assets/certificateimage/python hackerRank.png"
         },
+        {
+            "title":"Data Analytics",
+            "platform":'Forage',
+            "credential":"62C60659914C",
+            "link":"./Assets/certificateimage/Deloitte.png"
+        }
     ]
 }
 
