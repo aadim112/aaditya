@@ -18,16 +18,21 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(false); // Keep this state
   const [isMobile, setIsMobile] = useState(window.innerWidth < 500);
 
-  //Fetching the api key
-  const response = fetch('https://aaditya-qpx9.onrender.com/')
-  .then(response => response.json())
-  .then(data => {
-    console.log(data);
-  })
-  .catch(error => {
-    console.error('Error fetching API key:', error);
-  });
-  console.log(response)
+  // Fetching the API data
+  fetch('https://aaditya-qpx9.onrender.com/')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('API Response:', data);
+    })
+    .catch(error => {
+      console.error('Error fetching data from API:', error);
+    });
+
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 500);
