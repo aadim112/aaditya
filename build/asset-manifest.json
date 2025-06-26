@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/aaditya/static/css/main.61c0bd4c.css",
-    "main.js": "/aaditya/static/js/main.b4ee904d.js",
+    "main.js": "/aaditya/static/js/main.1b819150.js",
     "static/js/488.8515a8b3.chunk.js": "/aaditya/static/js/488.8515a8b3.chunk.js",
     "static/media/cmate.png": "/aaditya/static/media/cmate.a8d5a64a45991a0dc910.png",
     "static/media/medilog.png": "/aaditya/static/media/medilog.1ff0ed9fc315f644c7ae.png",
@@ -23,11 +23,11 @@
     "static/media/logo.svg": "/aaditya/static/media/logo.6ce24c58023cc2f8fd88.svg",
     "index.html": "/aaditya/index.html",
     "main.61c0bd4c.css.map": "/aaditya/static/css/main.61c0bd4c.css.map",
-    "main.b4ee904d.js.map": "/aaditya/static/js/main.b4ee904d.js.map",
+    "main.1b819150.js.map": "/aaditya/static/js/main.1b819150.js.map",
     "488.8515a8b3.chunk.js.map": "/aaditya/static/js/488.8515a8b3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.61c0bd4c.css",
-    "static/js/main.b4ee904d.js"
+    "static/js/main.1b819150.js"
   ]
 }
