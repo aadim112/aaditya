@@ -20,8 +20,8 @@ function App() {
   const [data,setData] = useState({
     'Active Days': 0,
     'Total Contributions':0,
-    'Total Days':0,
-    'Total Questions':0
+    'Total Days':144,
+    'Total Questions':140
   });
 useEffect(() => {
   fetch('https://aaditya-qpx9.onrender.com/')
@@ -203,6 +203,12 @@ useEffect(() => {
                 <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/189_Kaggle_logo_logos-512.png" style={{ width: '30px', height: '30px',scale:'0.8' }} />
                 <a href='https://www.kaggle.com/aaditya112' style={{textDecoration:'none'}}><p style={{color:'black'}}>Kaggle</p></a>
               </div>
+            </div>
+            <p style={{ fontFamily: 'poppins', color: 'grey', marginLeft: '30px', fontSize: '20px', fontWeight: 'bold' }}>Featured Projects</p>
+            <div className='featuredProjects'>
+              <div className='featureDiv'></div>
+              <div className='featureDiv'></div>
+              <div className='featureDiv'></div>
             </div>
             <p style={{ fontFamily: 'poppins', color: 'black', marginLeft: '30px', fontSize: '20px', fontWeight: 'bold' }}>Know my cards</p>
             <div className="tech-stack">

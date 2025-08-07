@@ -48,6 +48,15 @@ const ProjectsData = {
             "link":"./Assets/projectsimage/cmate.png",
             "gitlink" : 'https://github.com/aadim112/CMate'
         },
+        {
+            "title" : "Drone Surveillnace System with RL",
+            "description":"Drone Surveillance System is a solution to human error and inefficient decision-making in drone surveillance operations. This system leverages the capabilities of Artificial Intelligence and Reinforcement Learning to operate and utilize drones for surveillance. It enables autonomous navigation, intelligent target identification, and real-time decision-making with minimal human intervention. By integrating AI models, the system can adapt to dynamic environments and efficiently perform tasks such as anomaly detection, crowd monitoring, and search operations.",
+            "technologies" : ["Pybullet","Gymnasium","Reinforcement/Supervised","Supervised"],
+            "summary" : "The Drone Surveillance System enhances traditional surveillance by reducing human error ...",
+            "link":"./Assets/projectsimage/drone-surveillnace.jpeg",
+            "gitlink" : 'https://github.com/RohanSali/Drone-Surveillance-System'
+        }
+
     ],
     "certifications": [
         {
@@ -85,6 +94,12 @@ const ProjectsData = {
             "platform":'Forage',
             "credential":"62C60659914C",
             "link":"./Assets/certificateimage/Deloitte.png"
+        },
+        {
+            "title":"Data Pre-Processing for ML",
+            "platform":'Udemy',
+            "credential":"UC-83937212-5853-4bc8-8cdd-55ecc5712c56",
+            "link":"./Assets/certificateimage/preprocessing.jpg"
         }
     ]
 }
