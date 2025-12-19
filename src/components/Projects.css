@@ -1,0 +1,257 @@
+/* Projects Section Styles */
+.project-tab {
+  display: block;
+}
+
+.section-heading {
+  font-family: 'Poppins', sans-serif;
+  margin-left: 30px;
+  color: grey;
+}
+
+.projects {
+  display: flex;
+}
+
+.project-preview-heading {
+  font-family: poppins;
+  margin-left: 30px;
+  width: 90%;
+}
+
+.projects-container {
+  display: grid;
+  margin-left: 30px;
+  gap: 16px;
+  grid-template-columns: 300px 300px;
+}
+
+.projects-container.three-columns {
+  grid-template-columns: 300px 300px 300px;
+}
+
+.projects-container.two-columns {
+  margin: 15px;
+  grid-template-columns: 300px 300px;
+}
+
+.projects-container.mobile-layout {
+  grid-template-columns: 1fr;
+  margin: 15px;
+}
+
+/* Project Card */
+.prj {
+  width: 300px;
+  height: 410px;
+  border-radius: 8px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.prj-img-container {
+  width: 260px;
+  height: 200px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.prj img {
+  width: 260px;
+  height: 200px;
+  border-radius: 7px;
+  transition: transform 0.2s ease-in-out;
+  transform-origin: center;
+  object-fit: cover;
+}
+
+.prj img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.prj h2 {
+  font-family: Poppins;
+  font-size: 18px;
+  color: rgb(68, 68, 68);
+  margin-bottom: 0px;
+  width: 80%;
+}
+
+.view-prj {
+  width: 86%;
+  height: 50px;
+  background-color: black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  cursor: pointer;
+}
+
+/* Project Overview */
+.project-overview {
+  width: 1000px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.prj-thumbnail {
+  width: 500px;
+  height: 500px;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 7px;
+  background-color: rgba(222, 222, 222, 0.199);
+}
+
+.prj-thumbnail img {
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+  object-position: left;
+  transition: transform 0.15s ease-in-out;
+}
+
+.prj-thumbnail img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.git-link {
+  width: 150px;
+  height: 50px;
+  background-color: black;
+  border-radius: 7px;
+  display: flex;
+  color: white;
+  font-family: poppins;
+  align-items: center;
+  justify-content: space-around;
+  text-decoration: none;
+}
+
+.git-link p {
+  text-decoration: none;
+  color: white;
+}
+
+.tect-lang {
+  width: 90%;
+  height: auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+}
+
+.tect-lang p {
+  width: auto;
+  height: 15px;
+  padding: 8px;
+  background-color: rgb(81, 81, 255);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: poppins;
+  border-radius: 7px;
+  margin: 0px;
+}
+
+/* Dark Mode */
+.dark-mode .view-prj {
+  background-color: #444444;
+}
+
+.dark-mode .git-link {
+  background-color: #333333;
+}
+
+.dark-mode h2 {
+  color: #cccccc !important;
+}
+
+.dark-mode p {
+  color: white !important;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .project-preview-heading {
+    width: 520px;
+    margin-left: 30px;
+    height: auto;
+  }
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .project-overview {
+    width: 90%;
+    max-width: 100%;
+    padding: 20px;
+  }
+  .prj-thumbnail {
+    width: 100%;
+    max-width: 100%;
+  }
+  .prj-thumbnail img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .prj {
+    height: auto;
+    width: 90%;
+    max-width: 100%;
+    align-items: center;
+    background-color: #d8d8d851;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .projects-container {
+    width: auto;
+    height: auto;
+    display: grid;
+    margin: 15px;
+    grid-template-columns: 300px 300px;
+  }
+  .projects-container.mobile-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .view-prj {
+    display: none;
+  }
+  .prj-thumbnail {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+  .prj-thumbnail img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+  .project-preview-heading {
+    width: 90%;
+    font-size: 14px;
+  }
+  .projects {
+    flex-direction: column;
+  }
+  .tect-lang {
+    grid-template-columns: auto auto;
+    gap: 10px;
+  }
+}
+

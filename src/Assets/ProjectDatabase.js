@@ -51,7 +51,7 @@ const ProjectsData = {
         {
             "title" : "Drone Surveillnace System with RL",
             "description":"Drone Surveillance System is a solution to human error and inefficient decision-making in drone surveillance operations. This system leverages the capabilities of Artificial Intelligence and Reinforcement Learning to operate and utilize drones for surveillance. It enables autonomous navigation, intelligent target identification, and real-time decision-making with minimal human intervention. By integrating AI models, the system can adapt to dynamic environments and efficiently perform tasks such as anomaly detection, crowd monitoring, and search operations.",
-            "technologies" : ["Pybullet","Gymnasium","Reinforcement/Supervised","Supervised"],
+            "technologies" : ["Pybullet","Gymnasium","Reinforcement/Supervised","Supervised Learning"],
             "summary" : "The Drone Surveillance System enhances traditional surveillance by reducing human error ...",
             "link":"./Assets/projectsimage/drone-surveillnace.jpeg",
             "gitlink" : 'https://github.com/RohanSali/Drone-Surveillance-System'
