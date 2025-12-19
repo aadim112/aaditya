@@ -21,3 +21,4 @@ const ProjectCard = ({ imgsrc, projectName, ProjectSummary, prj, github, handleP
 
 export default ProjectCard;
 
+
