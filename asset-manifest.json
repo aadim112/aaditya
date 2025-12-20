@@ -1,34 +1,35 @@
 {
   "files": {
-    "main.css": "/aaditya/static/css/main.61c0bd4c.css",
-    "main.js": "/aaditya/static/js/main.1fd58a07.js",
-    "static/js/488.8515a8b3.chunk.js": "/aaditya/static/js/488.8515a8b3.chunk.js",
+    "main.css": "/aaditya/static/css/main.6b21917e.css",
+    "main.js": "/aaditya/static/js/main.fa77ff18.js",
+    "static/js/488.afde8007.chunk.js": "/aaditya/static/js/488.afde8007.chunk.js",
+    "static/media/back1.jpg": "/aaditya/static/media/back1.68bee5b917c493ee2321.jpg",
     "static/media/cmate.png": "/aaditya/static/media/cmate.a8d5a64a45991a0dc910.png",
     "static/media/medilog.png": "/aaditya/static/media/medilog.1ff0ed9fc315f644c7ae.png",
     "static/media/arduino.png": "/aaditya/static/media/arduino.485674b11270c012a070.png",
+    "static/media/back3.jpg": "/aaditya/static/media/back3.37e61493f90957a41d62.jpg",
     "static/media/rentpar.png": "/aaditya/static/media/rentpar.5c17c681d31c697cc50a.png",
-    "static/media/frame.png": "/aaditya/static/media/frame.7d0cdf0ba4793732620c.png",
+    "static/media/back2.jpg": "/aaditya/static/media/back2.ab09b7d9023f17428e01.jpg",
     "static/media/python hackerRank.png": "/aaditya/static/media/python hackerRank.5a2bfc1baab5d017d445.png",
     "static/media/python.png": "/aaditya/static/media/python.8217fd7868d8d73d5455.png",
+    "static/media/preprocessing.jpg": "/aaditya/static/media/preprocessing.8253b9bb5fc3c9dbc370.jpg",
     "static/media/html.png": "/aaditya/static/media/html.4d32bb5540087e8fde4d.png",
     "static/media/canteen.png": "/aaditya/static/media/canteen.ee2e7b79ce56fc8b9a0c.png",
     "static/media/c++ devtown.png": "/aaditya/static/media/c++ devtown.8d399e85f86c4ea7f08e.png",
     "static/media/portfolio.png": "/aaditya/static/media/portfolio.cd334238ce89353d4740.png",
     "static/media/profile.jpg": "/aaditya/static/media/profile.c29180d23efb2843f47e.jpg",
-    "static/media/Resume.pdf": "/aaditya/static/media/Resume.d838fb41fa8fd8ffb9c1.pdf",
-    "static/media/Accomodation.png": "/aaditya/static/media/Accomodation.5fb8a0d876bb34527004.png",
     "static/media/javascript.jpg": "/aaditya/static/media/javascript.7ad7c9ece8f015cadfad.jpg",
+    "static/media/drone-surveillnace.jpeg": "/aaditya/static/media/drone-surveillnace.33110c11a0b0a623b04e.jpeg",
     "static/media/Deloitte.png": "/aaditya/static/media/Deloitte.a0ab865e65da1b14072e.png",
     "static/media/PyTorchDarkMode.png": "/aaditya/static/media/PyTorchDarkMode.758c6ddbb49d42fe35e5.png",
     "static/media/flaskDarkMode.png": "/aaditya/static/media/flaskDarkMode.e7365b7949dda7f2f864.png",
-    "static/media/logo.svg": "/aaditya/static/media/logo.6ce24c58023cc2f8fd88.svg",
     "index.html": "/aaditya/index.html",
-    "main.61c0bd4c.css.map": "/aaditya/static/css/main.61c0bd4c.css.map",
-    "main.1fd58a07.js.map": "/aaditya/static/js/main.1fd58a07.js.map",
-    "488.8515a8b3.chunk.js.map": "/aaditya/static/js/488.8515a8b3.chunk.js.map"
+    "main.6b21917e.css.map": "/aaditya/static/css/main.6b21917e.css.map",
+    "main.fa77ff18.js.map": "/aaditya/static/js/main.fa77ff18.js.map",
+    "488.afde8007.chunk.js.map": "/aaditya/static/js/488.afde8007.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.61c0bd4c.css",
-    "static/js/main.1fd58a07.js"
+    "static/css/main.6b21917e.css",
+    "static/js/main.fa77ff18.js"
   ]
 }
