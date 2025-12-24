@@ -1,4 +1,3 @@
-/* About Section Styles */
 .home {
   display: block;
 }
@@ -25,7 +24,6 @@
   font-weight: bold;
 }
 
-/* Banner Section */
 .banner-container {
   width: 100%;
   height: auto;
@@ -83,7 +81,6 @@
   margin-bottom: 10px;
 }
 
-/* Stats Section */
 .stats {
   width: 90%;
   height: 60px;
@@ -135,7 +132,6 @@
   height: 30px;
 }
 
-/* Tech Stack */
 .tech-stack {
   width: 100%;
   height: auto;
@@ -276,7 +272,6 @@
   margin-top: 0px;
 }
 
-/* Featured Projects */
 .featuredProjects {
   width: 90%;
   height: 170px;
@@ -320,7 +315,6 @@
   background-size: cover;
 }
 
-/* Dark Mode */
 .dark-mode .about {
   background-color: #2d2d2d !important;
 }
@@ -366,7 +360,6 @@
   border-color: #555555;
 }
 
-/* Responsive */
 @media (max-width: 1200px) {
     .about{
         padding-bottom: 20px;

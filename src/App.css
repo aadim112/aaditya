@@ -36,16 +36,56 @@ body {
 }
 
 .main-heading {
+  display: flex;
+  align-items: baseline;
   font-family: 'Poppins', sans-serif;
   font-size: 35px;
   margin-bottom: 0px;
   font-weight: bold;
   margin-left: 30px;
+  gap: 20px;
 }
 
-.main-subheading {
+.main-subheading{
+  max-height: 50px;
   font-size: 18px;
+  max-height: 30px;
   font-family: 'poppins', sans-serif;
+  overflow: hidden;
+}
+.main-subheading div{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: scroll-up 6s ease-in-out infinite;
+}
+.main-subheading div img{
+  object-fit: contain;
+  width: 30px;
+  height: 30px;
+}
+@keyframes scroll-up {
+  0% {
+    transform: translateY(100%);
+  }
+  2% {
+    transform: translateY(50%);
+  }
+  5% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(-20%);
+  }
+  35% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
 }
 
 /* Footer Styles */
@@ -112,6 +152,7 @@ footer p {
   .main-heading {
     font-size: 24px;
     margin-left: 15px;
+    display: block;
   }
   .main-subheading {
     font-size: 14px;

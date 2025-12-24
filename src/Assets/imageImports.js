@@ -1,4 +1,3 @@
-// Static imports for all project images
 import portfolio from './projectsimage/portfolio.png';
 import canteen from './projectsimage/canteen.png';
 import arduino from './projectsimage/arduino.png';
@@ -7,7 +6,6 @@ import rentpar from './projectsimage/rentpar.png';
 import cmate from './projectsimage/cmate.png';
 import droneSurveillance from './projectsimage/drone-surveillnace.jpeg';
 
-// Static imports for all certificate images
 import cppDevtown from './certificateimage/c++ devtown.png';
 import html from './certificateimage/html.png';
 import python from './certificateimage/python.png';
@@ -15,8 +13,8 @@ import javascript from './certificateimage/javascript.jpg';
 import pythonHackerRank from './certificateimage/python hackerRank.png';
 import deloitte from './certificateimage/Deloitte.png';
 import preprocessing from './certificateimage/preprocessing.jpg';
+import techjar from './certificateimage/CompanyImage/techjar.webp'
 
-// Project images mapping
 export const projectImages = {
   './Assets/projectsimage/portfolio.png': portfolio,
   './Assets/projectsimage/canteen.png': canteen,
@@ -27,7 +25,6 @@ export const projectImages = {
   './Assets/projectsimage/drone-surveillnace.jpeg': droneSurveillance,
 };
 
-// Certificate images mapping
 export const certificateImages = {
   './Assets/certificateimage/c++ devtown.png': cppDevtown,
   './Assets/certificateimage/html.png': html,
@@ -37,5 +34,10 @@ export const certificateImages = {
   './Assets/certificateimage/Deloitte.png': deloitte,
   './Assets/certificateimage/preprocessing.jpg': preprocessing,
 };
+
+export const companyImages = {
+  './Assets/certificateimage/CompanyImage/techjar.webp': techjar,
+};
+
 
 

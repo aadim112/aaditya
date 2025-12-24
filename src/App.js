@@ -9,6 +9,11 @@ import Navigation from './components/Navigation';
 import About from './components/About';
 import Projects from './components/Projects';
 import Certifications from './components/Certifications';
+import Experience from './components/Experience';
+import NeuralNet from './Assets/neral.png'
+import Japan from './Assets/japan.png'
+import game from './Assets/game.png'
+
 
 
 
@@ -46,7 +51,7 @@ useEffect(() => {
     .catch(error => {
       console.error('Error fetching data from API:', error);
     });
-}, []); // ✅ Only run once when component mounts
+}, []); 
 
 
   useEffect(() => {
@@ -90,14 +95,23 @@ useEffect(() => {
         <div className={`layout ${isDarkMode ? 'dark-mode' : ''}`}>
           <Navigation handleWindow={handleWindow} isDarkMode={isDarkMode} />
           <div className="dynamic-layout" id="dynamic">
-            <p className="main-heading">Aditya M Patil <span className="main-subheading">(Machine Learning Student)</span></p> 
+            <div className="main-heading">
+              <p style={{marginBottom:'0px'}}>Aditya M Patil</p> 
+              <div className="main-subheading">
+                <div><img src={NeuralNet}></img>Machine Learning Student</div>
+                <div style={{}}><img src={Japan}></img>Learning Japanese</div>
+              </div>
+            </div> 
             <div style={{display:windowWidth === 0 ? 'block' : 'none'}}>
               <About isDarkMode={isDarkMode} data={data} />
             </div>
             <div style={{display:windowWidth === 1 ? 'block' : 'none'}}>
-              <Projects selectedProject={selectedProject} setSelectedProject={setSelectedProject} isMobile={isMobile} />
+              <Experience isDarkMode={isDarkMode} data={data} />
             </div>
             <div style={{display:windowWidth === 2 ? 'block' : 'none'}}>
+              <Projects selectedProject={selectedProject} setSelectedProject={setSelectedProject} isMobile={isMobile} />
+            </div>
+            <div style={{display:windowWidth === 3 ? 'block' : 'none'}}>
               <Certifications />
             </div>
           </div>

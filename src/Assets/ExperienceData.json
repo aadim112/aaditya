@@ -1,0 +1,14 @@
+[
+  {
+    "company": "Techjar Technologies",
+    "role": "Full Stack Web-Developer",
+    "logo": "./Assets/certificateimage/CompanyImage/techjar.webp",
+    "startDate": "Sep 2025",
+    "endDate": "Dec 2025",
+    "workPoints": [
+      "Worked on Intergration and Syncronisation of ElevenLab and Datagram TTS API Service.",
+      "Imporved the Frontend of the website using ReactJS.",
+      ""
+    ]
+  }
+]

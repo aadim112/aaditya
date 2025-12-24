@@ -18,7 +18,6 @@ const Projects = ({ selectedProject, setSelectedProject, isMobile }) => {
           <p className="project-preview-heading">Working on projects in my most liked work. I do spend lot of the time developing the Solutions on the problems I see around me. Some of my works are below.</p>
           <div className={isMobile ? 'projects-container mobile-layout' : selectedProject ? 'projects-container three-' : 'projects-container two-columns'}>
             {ProjectsData.projects.map((projects, index) => {
-              // Use static image mapping
               const imageSrc = projectImages[projects.link] || projects.link;
               return (
                 <ProjectCard
