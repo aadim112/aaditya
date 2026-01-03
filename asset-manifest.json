@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/aaditya/static/css/main.13d1bd1b.css",
-    "main.js": "/aaditya/static/js/main.fe2c5cba.js",
+    "main.css": "/aaditya/static/css/main.ce5ba5d4.css",
+    "main.js": "/aaditya/static/js/main.58231042.js",
     "static/js/488.afde8007.chunk.js": "/aaditya/static/js/488.afde8007.chunk.js",
     "static/media/back1.jpg": "/aaditya/static/media/back1.68bee5b917c493ee2321.jpg",
     "static/media/cmate.png": "/aaditya/static/media/cmate.a8d5a64a45991a0dc910.png",
@@ -9,8 +9,10 @@
     "static/media/arduino.png": "/aaditya/static/media/arduino.485674b11270c012a070.png",
     "static/media/back3.jpg": "/aaditya/static/media/back3.37e61493f90957a41d62.jpg",
     "static/media/rentpar.png": "/aaditya/static/media/rentpar.5c17c681d31c697cc50a.png",
+    "static/media/purechange.png": "/aaditya/static/media/purechange.082be7b96f6194d106de.png",
     "static/media/back2.jpg": "/aaditya/static/media/back2.ab09b7d9023f17428e01.jpg",
     "static/media/python hackerRank.png": "/aaditya/static/media/python hackerRank.5a2bfc1baab5d017d445.png",
+    "static/media/profile2.png": "/aaditya/static/media/profile2.c2fa8cc547a5e1b2e172.png",
     "static/media/python.png": "/aaditya/static/media/python.8217fd7868d8d73d5455.png",
     "static/media/preprocessing.jpg": "/aaditya/static/media/preprocessing.8253b9bb5fc3c9dbc370.jpg",
     "static/media/html.png": "/aaditya/static/media/html.4d32bb5540087e8fde4d.png",
@@ -26,12 +28,12 @@
     "static/media/PyTorchDarkMode.png": "/aaditya/static/media/PyTorchDarkMode.758c6ddbb49d42fe35e5.png",
     "static/media/flaskDarkMode.png": "/aaditya/static/media/flaskDarkMode.e7365b7949dda7f2f864.png",
     "index.html": "/aaditya/index.html",
-    "main.13d1bd1b.css.map": "/aaditya/static/css/main.13d1bd1b.css.map",
-    "main.fe2c5cba.js.map": "/aaditya/static/js/main.fe2c5cba.js.map",
+    "main.ce5ba5d4.css.map": "/aaditya/static/css/main.ce5ba5d4.css.map",
+    "main.58231042.js.map": "/aaditya/static/js/main.58231042.js.map",
     "488.afde8007.chunk.js.map": "/aaditya/static/js/488.afde8007.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.13d1bd1b.css",
-    "static/js/main.fe2c5cba.js"
+    "static/css/main.ce5ba5d4.css",
+    "static/js/main.58231042.js"
   ]
 }
