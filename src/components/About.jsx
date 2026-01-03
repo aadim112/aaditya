@@ -10,6 +10,7 @@ import flaskDarkMode from '../Assets/flaskDarkMode.png';
 import droneSurvillance from '../Assets/projectsimage/drone-surveillnace.jpeg'
 import purechange from '../Assets/projectsimage/purechange.png'
 import medilog from '../Assets/projectsimage/medilog.png'
+import credly from '../Assets/credly.png'
 
 
 const About = ({ isDarkMode, data }) => {
@@ -81,6 +82,12 @@ const About = ({ isDarkMode, data }) => {
           <img src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/189_Kaggle_logo_logos-512.png" style={{ width: '30px', height: '30px', scale: '0.8' }} alt="kaggle" />
           <a href="https://www.kaggle.com/aaditya112" style={{ textDecoration: 'none' }}>
             <p style={{ color: 'black' }}>Kaggle</p>
+          </a>
+        </div>
+        <div className="find-me">
+          <img src={credly} style={{ width: '30px', height: '30px', scale: '0.8' }} alt="kaggle" />
+          <a href="https://www.credly.com/users/aaditya-patil.bb99cd11" style={{ textDecoration: 'none' }}>
+            <p style={{ color: 'black' }}>Credly</p>
           </a>
         </div>
       </div>

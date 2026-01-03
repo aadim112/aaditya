@@ -153,11 +153,15 @@ footer p {
     font-size: 24px;
     margin-left: 15px;
     display: block;
+    text-align: center;
   }
   .main-subheading {
     font-size: 14px;
     display: block;
     margin-top: 5px;
+  }
+  .main-subheading div{
+    justify-content: center;
   }
   footer {
     text-align: center;
