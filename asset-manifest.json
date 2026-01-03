@@ -1,16 +1,13 @@
 {
   "files": {
-    "main.css": "/aaditya/static/css/main.3eafa4ef.css",
-    "main.js": "/aaditya/static/js/main.2a4d4ed3.js",
+    "main.css": "/aaditya/static/css/main.beafbfe8.css",
+    "main.js": "/aaditya/static/js/main.7dc6ce5b.js",
     "static/js/488.afde8007.chunk.js": "/aaditya/static/js/488.afde8007.chunk.js",
-    "static/media/back1.jpg": "/aaditya/static/media/back1.68bee5b917c493ee2321.jpg",
     "static/media/cmate.png": "/aaditya/static/media/cmate.a8d5a64a45991a0dc910.png",
     "static/media/medilog.png": "/aaditya/static/media/medilog.1ff0ed9fc315f644c7ae.png",
     "static/media/arduino.png": "/aaditya/static/media/arduino.485674b11270c012a070.png",
-    "static/media/back3.jpg": "/aaditya/static/media/back3.37e61493f90957a41d62.jpg",
     "static/media/rentpar.png": "/aaditya/static/media/rentpar.5c17c681d31c697cc50a.png",
     "static/media/purechange.png": "/aaditya/static/media/purechange.082be7b96f6194d106de.png",
-    "static/media/back2.jpg": "/aaditya/static/media/back2.ab09b7d9023f17428e01.jpg",
     "static/media/python hackerRank.png": "/aaditya/static/media/python hackerRank.5a2bfc1baab5d017d445.png",
     "static/media/profile2.png": "/aaditya/static/media/profile2.c2fa8cc547a5e1b2e172.png",
     "static/media/python.png": "/aaditya/static/media/python.8217fd7868d8d73d5455.png",
@@ -18,6 +15,7 @@
     "static/media/html.png": "/aaditya/static/media/html.4d32bb5540087e8fde4d.png",
     "static/media/canteen.png": "/aaditya/static/media/canteen.ee2e7b79ce56fc8b9a0c.png",
     "static/media/c++ devtown.png": "/aaditya/static/media/c++ devtown.8d399e85f86c4ea7f08e.png",
+    "static/media/Resume.pdf": "/aaditya/static/media/Resume.438d0fd8df1af25d36e0.pdf",
     "static/media/portfolio.png": "/aaditya/static/media/portfolio.cd334238ce89353d4740.png",
     "static/media/neral.png": "/aaditya/static/media/neral.47ab7d1aeb33dd4da655.png",
     "static/media/techjar.webp": "/aaditya/static/media/techjar.5fd2c2601064b1188101.webp",
@@ -29,12 +27,12 @@
     "static/media/flaskDarkMode.png": "/aaditya/static/media/flaskDarkMode.e7365b7949dda7f2f864.png",
     "static/media/credly.png": "/aaditya/static/media/credly.9ee713e9a8942c410854.png",
     "index.html": "/aaditya/index.html",
-    "main.3eafa4ef.css.map": "/aaditya/static/css/main.3eafa4ef.css.map",
-    "main.2a4d4ed3.js.map": "/aaditya/static/js/main.2a4d4ed3.js.map",
+    "main.beafbfe8.css.map": "/aaditya/static/css/main.beafbfe8.css.map",
+    "main.7dc6ce5b.js.map": "/aaditya/static/js/main.7dc6ce5b.js.map",
     "488.afde8007.chunk.js.map": "/aaditya/static/js/488.afde8007.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3eafa4ef.css",
-    "static/js/main.2a4d4ed3.js"
+    "static/css/main.beafbfe8.css",
+    "static/js/main.7dc6ce5b.js"
   ]
 }
