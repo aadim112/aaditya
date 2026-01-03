@@ -5,6 +5,7 @@ import medilog from './projectsimage/medilog.png';
 import rentpar from './projectsimage/rentpar.png';
 import cmate from './projectsimage/cmate.png';
 import droneSurveillance from './projectsimage/drone-surveillnace.jpeg';
+import purechange from './projectsimage/purechange.png'
 
 import cppDevtown from './certificateimage/c++ devtown.png';
 import html from './certificateimage/html.png';
@@ -23,6 +24,7 @@ export const projectImages = {
   './Assets/projectsimage/rentpar.png': rentpar,
   './Assets/projectsimage/cmate.png': cmate,
   './Assets/projectsimage/drone-surveillnace.jpeg': droneSurveillance,
+  './Assets/projectsimage/purechange.png': purechange,
 };
 
 export const certificateImages = {

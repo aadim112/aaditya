@@ -55,6 +55,14 @@ const ProjectsData = {
             "summary" : "The Drone Surveillance System enhances traditional surveillance by reducing human error ...",
             "link":"./Assets/projectsimage/drone-surveillnace.jpeg",
             "gitlink" : 'https://github.com/RohanSali/Drone-Surveillance-System'
+        },
+        {
+            "title" : "Pure Change",
+            "description":"Pure Change is a structured self-improvement platform that helps people build discipline, break unhealthy compulsive habits (especially excessive masturbation and digital distractions), and maintain healthy routines.It combines tracking, motivation, education, community and AI guidance so users can stay focused, increase self-control, and improve productivity and mental clarity.",
+            "technologies" : ["Reactjs","express","Firebase","RazorPay"],
+            "summary" : "Pure Change is a structured self-improvement platform that helps people build...",
+            "link":"./Assets/projectsimage/purechange.png",
+            "gitlink" : 'https://github.com/aadim112/PureChange'
         }
 
     ],

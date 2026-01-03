@@ -1,20 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './About.css';
 import profileImage from '../Assets/profile.jpg';
+import profileImage2 from '../Assets/profile2.png'
 import back1 from '../Assets/back1.jpg';
 import back2 from '../Assets/back2.jpg';
 import back3 from '../Assets/back3.jpg';
 import pytorchDarkMode from '../Assets/PyTorchDarkMode.png';
 import flaskDarkMode from '../Assets/flaskDarkMode.png';
+import droneSurvillance from '../Assets/projectsimage/drone-surveillnace.jpeg'
+import purechange from '../Assets/projectsimage/purechange.png'
+import medilog from '../Assets/projectsimage/medilog.png'
+
 
 const About = ({ isDarkMode, data }) => {
+
+  const [showPopup, setShowPopup] = useState(false);
+  const [selectedProject,setSelectedProject] = useState(null);
+
+  function showFeaturedProject(number) {
+    setSelectedProject(number);
+    setShowPopup(true);
+  }
+  const featuredProjectInfoDict = {"Drone":"Why Drone Surveillance System?Because of it's versatile use cases and Capabilities with AI. Drone are the mobile devices and best suite for surveillance. They can cover wide area for surveillance. Incorporating AI with drone opens door for many ideas and increases the efficiency and ensure continuous monitoring of specific area. By this system one person can manage multiple areas.So we created an Interface using .NET framework, a Server with MongoDB database, Fast API and Websocket for real time communication of application with drone, Created various supervised models and train them on synthetic data/images we generated from stable diffusion and used datasets from kaggle and Roboflow. We used about 50,000+ images to train and finetune the models to predict the Anomaly, Face detection in crowd, Threat detection etc. Since we didn't had any physical drone we used pyBullet,Gymnasium and gym-pybullet library to simulate the drone.We trained the drone to control the flight using Reinforcement Learning in the simulation.",
+    "PureChnage" : "Pure Change is a structured self‑improvement platform that helps people build discipline, break unhealthy compulsive habits (especially excessive masturbation and digital distractions), and maintain healthy routines. It combines tracking, motivation, education, community and AI guidance so users can stay focused, increase self-control, and improve productivity and mental clarity.",
+    "Medilog": "MEDILOG is a web-based platform designed to streamline the interaction between doctors and patients by offering an efficient appointment booking system, patient records management, and a user-friendly interface.Patients can register and log in to book appointments with their preferred doctors.Doctors can access patient history and manage appointments.The platform securely stores medical records and prescriptions for easy access.Reduces paperwork by digitizing patient records.Enhances the efficiency of scheduling appointments.Improves doctor-patient interaction by providing a centralized medical record system."
+  }
   return (
     <div className="home">
       <h2 className="section-heading">Home</h2>
       <div className="banner-container">
         <div className="banner">
           <div className="image-container">
-            <img src={profileImage} alt="profile" width="100%" height="100%" style={{ objectFit: 'cover', borderRadius: '8px' }} />
+            <img src={profileImage2} alt="profile" width="100%" height="100%" style={{ objectFit: 'cover', borderRadius: '8px' }} />
           </div>
           <div className="about-container">
             <div className="about">
@@ -107,9 +124,9 @@ const About = ({ isDarkMode, data }) => {
       </div>
       <p className="section-subheading">Featured Projects</p>
       <div className="featuredProjects">
-        <div className="featureDiv1"></div>
-        <div className="featureDiv2"></div>
-        <div className="featureDiv3"></div>
+        <div className="featureDiv1" onClick={() => showFeaturedProject({"BannerImage":droneSurvillance,"Title":"VIRA","Description":featuredProjectInfoDict.Drone})}></div>
+        <div className="featureDiv2" onClick={() => showFeaturedProject({"BannerImage":medilog,"Title":"Medilog","Description":featuredProjectInfoDict.Medilog})}></div>
+        <div className="featureDiv3" onClick={() => showFeaturedProject({"BannerImage":purechange,"Title":"Purechange","Description":featuredProjectInfoDict.PureChnage})}></div>
       </div>
       <p className="section-subheading-black">Know my cards</p>
       <div className="tech-stack">
@@ -128,6 +145,21 @@ const About = ({ isDarkMode, data }) => {
         </div>
         <div style={{ height: '30px' }}></div>
       </div>
+      
+      {showPopup && (
+      <div className="popup-overlay" onClick={() => setShowPopup(false)}>
+        <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+          <div className='featuredProjectImage'>
+            <img src={selectedProject.BannerImage}/>
+          </div>
+          <button className="close-btn" onClick={() => setShowPopup(false)}>×</button>
+          <div className='featuredProjectInfo'>
+            <h3>{selectedProject.Title}</h3>
+            <p>{selectedProject.Description}</p>
+          </div>
+        </div>
+      </div>
+      )}
     </div>
   );
 };

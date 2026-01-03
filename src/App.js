@@ -99,7 +99,7 @@ useEffect(() => {
               <p style={{marginBottom:'0px'}}>Aditya M Patil</p> 
               <div className="main-subheading">
                 <div><img src={NeuralNet}></img>Machine Learning Student</div>
-                <div style={{}}><img src={Japan}></img>Learning Japanese</div>
+                <div style={{}}><img src={Japan}></img>Learning 日本語</div>
               </div>
             </div> 
             <div style={{display:windowWidth === 0 ? 'block' : 'none'}}>
