@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/aaditya/static/css/main.ce5ba5d4.css",
-    "main.js": "/aaditya/static/js/main.58231042.js",
+    "main.css": "/aaditya/static/css/main.3eafa4ef.css",
+    "main.js": "/aaditya/static/js/main.2a4d4ed3.js",
     "static/js/488.afde8007.chunk.js": "/aaditya/static/js/488.afde8007.chunk.js",
     "static/media/back1.jpg": "/aaditya/static/media/back1.68bee5b917c493ee2321.jpg",
     "static/media/cmate.png": "/aaditya/static/media/cmate.a8d5a64a45991a0dc910.png",
@@ -27,13 +27,14 @@
     "static/media/Deloitte.png": "/aaditya/static/media/Deloitte.a0ab865e65da1b14072e.png",
     "static/media/PyTorchDarkMode.png": "/aaditya/static/media/PyTorchDarkMode.758c6ddbb49d42fe35e5.png",
     "static/media/flaskDarkMode.png": "/aaditya/static/media/flaskDarkMode.e7365b7949dda7f2f864.png",
+    "static/media/credly.png": "/aaditya/static/media/credly.9ee713e9a8942c410854.png",
     "index.html": "/aaditya/index.html",
-    "main.ce5ba5d4.css.map": "/aaditya/static/css/main.ce5ba5d4.css.map",
-    "main.58231042.js.map": "/aaditya/static/js/main.58231042.js.map",
+    "main.3eafa4ef.css.map": "/aaditya/static/css/main.3eafa4ef.css.map",
+    "main.2a4d4ed3.js.map": "/aaditya/static/js/main.2a4d4ed3.js.map",
     "488.afde8007.chunk.js.map": "/aaditya/static/js/488.afde8007.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ce5ba5d4.css",
-    "static/js/main.58231042.js"
+    "static/css/main.3eafa4ef.css",
+    "static/js/main.2a4d4ed3.js"
   ]
 }
