@@ -2,21 +2,20 @@ import React, { useEffect, useState } from 'react';
 import './About.css';
 import profileImage from '../Assets/profile.jpg';
 import profileImage2 from '../Assets/profile2.png'
-import back1 from '../Assets/back1.jpg';
-import back2 from '../Assets/back2.jpg';
-import back3 from '../Assets/back3.jpg';
 import pytorchDarkMode from '../Assets/PyTorchDarkMode.png';
 import flaskDarkMode from '../Assets/flaskDarkMode.png';
 import droneSurvillance from '../Assets/projectsimage/drone-surveillnace.jpeg'
 import purechange from '../Assets/projectsimage/purechange.png'
 import medilog from '../Assets/projectsimage/medilog.png'
 import credly from '../Assets/credly.png'
+import Resume from '../Assets/Resume.pdf'
 
 
 const About = ({ isDarkMode, data }) => {
 
   const [showPopup, setShowPopup] = useState(false);
   const [selectedProject,setSelectedProject] = useState(null);
+  const [activeTab, setActiveTab] = useState("tech");
 
   function showFeaturedProject(number) {
     setSelectedProject(number);
@@ -43,7 +42,7 @@ const About = ({ isDarkMode, data }) => {
               </p>
               <p className="about-text">I have been doing web-development since 3 years and have good expertise in it. Many of my project are web platform based. Currently I am studying about Machine Learning and Advance Machine Learning concepts.</p>
               <p className="about-text">Apart from technical things I like to play video games as they are entertaining also they impove reflexes and increases fast decision making power.</p>
-              <a href="" download className="resume-download-btn">
+              <a href={Resume} download className="resume-download-btn">
                 <p>Resume</p>
               </a>
             </div>
@@ -93,8 +92,9 @@ const About = ({ isDarkMode, data }) => {
       </div>
       <div className="tech-stack">
         <div className="cards">
-          <div className="card-label"><p>Tech Stack</p></div>
-          <div className="tec-container">
+          <div className={activeTab === "tech" ? "card1-enabled" : "card-label"} onClick={() => setActiveTab("tech")}><p>Tech Stack</p></div>
+          <div className={activeTab === "compitative" ? "card2-enabled" : "card-label2"} onClick={() => setActiveTab("compitative")}><p>Compitative</p></div>
+          { activeTab === "tech" ? <div className="tec-container">
             <div className="tech">
               <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" alt="python" />
               <p>Python</p>
@@ -126,7 +126,22 @@ const About = ({ isDarkMode, data }) => {
               {isDarkMode ? <img src="https://gymnasium.farama.org/_static/img/gymnasium_white.svg" style={{ objectFit: 'cover' }} alt="gymnasium" /> : <img src="https://gymnasium.farama.org/_static/img/gymnasium_black.svg" alt="gymnasium" />}
               <p>Gymnasium</p>
             </div>
-          </div>
+          </div> :
+                <div className="tech-stack">
+                  <div className="cards">
+                    <div className="stat">
+                      <div className="total-questions">
+                        <p>Total Question</p>
+                        <h2>{data['Total Questions']}</h2>
+                      </div>
+                      <div className="total-questions">
+                        <p>Total Active day</p>
+                        <h2>{data['Total Days']}</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div style={{ height: '30px' }}></div>
+                </div>}
         </div>
       </div>
       <p className="section-subheading">Featured Projects</p>
@@ -134,23 +149,6 @@ const About = ({ isDarkMode, data }) => {
         <div className="featureDiv1" onClick={() => showFeaturedProject({"BannerImage":droneSurvillance,"Title":"VIRA","Description":featuredProjectInfoDict.Drone})}></div>
         <div className="featureDiv2" onClick={() => showFeaturedProject({"BannerImage":medilog,"Title":"Medilog","Description":featuredProjectInfoDict.Medilog})}></div>
         <div className="featureDiv3" onClick={() => showFeaturedProject({"BannerImage":purechange,"Title":"Purechange","Description":featuredProjectInfoDict.PureChnage})}></div>
-      </div>
-      <p className="section-subheading-black">Know my cards</p>
-      <div className="tech-stack">
-        <div className="cards">
-          <div className="card-label"><p>Competative</p></div>
-          <div className="stat">
-            <div className="total-questions">
-              <p>Total Question</p>
-              <h2>{data['Total Questions']}</h2>
-            </div>
-            <div className="total-questions">
-              <p>Total Active day</p>
-              <h2>{data['Total Days']}</h2>
-            </div>
-          </div>
-        </div>
-        <div style={{ height: '30px' }}></div>
       </div>
       
       {showPopup && (

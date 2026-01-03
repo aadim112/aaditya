@@ -155,6 +155,9 @@ footer p {
     display: block;
     text-align: center;
   }
+  .main-heading{
+    font-size: 30px;
+  }
   .main-subheading {
     font-size: 14px;
     display: block;

@@ -162,6 +162,10 @@
 @media (max-width: 768px) {
   .timeline {
     padding-left: 30px;
+    margin-left: 30px;
+  }
+  .duration{
+    margin-top: 20px;
   }
   
   .timeline-dot {
