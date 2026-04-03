@@ -63,6 +63,14 @@ const ProjectsData = {
             "summary" : "Pure Change is a structured self-improvement platform that helps people build...",
             "link":"./Assets/projectsimage/purechange.png",
             "gitlink" : 'https://github.com/aadim112/PureChange'
+        },
+        {
+            "title" : "Nihongo Practice",
+            "description":"A simple website to practice Japanese Language by adding vocabs, checking grammar patterns and improving reading and listening. The webiste has integration with firebase realtime database to store the vocab and the grammar pattern user has learned about the japanese language. This information is further used by the website to generate user with reading and listening content. The website also consist of the relatable content for the Japanese Laguage. The website is JLPT exam centric and helps users to learn language as per the level of exam",
+            "technologies" : ["Reactjs","flask","Firebase","Render"],
+            "summary" : "A simple website to practice Japanese...",
+            "link":"./Assets/projectsimage/nihongo.png",
+            "gitlink" : 'https://github.com/aadim112/Nihongono-Practice'
         }
 
     ],
