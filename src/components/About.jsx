@@ -36,8 +36,8 @@ const About = ({ isDarkMode, data }) => {
           <div className="about-container">
             <div className="about">
               <p className="about-heading">Welcome to my little corner of the web</p>
-              <p className="about-text">Hello, I am Aditya Patil student at Dr. D. Y. Patil Institute of Engineering, Management and Research, Pune</p>
-              <p className="about-text">I always try to create solution on problems I notice. I love to solve those issues
+              <p className="about-text">Hello, I am Aditya student at Dr. D. Y. Patil Institute of Engineering, Management and Research, Pune</p>
+              <p className="about-text">I am always eager in learning new technologies realated to machine learning also I am a Japanese Language learner and will be appearing for the JLPT exam. I love to solve those issues
                 using my technical skills and learn new technologies whenever needed. I have various projects in my bucket which are developed in order to solve such problems.
               </p>
               <p className="about-text">I have been doing web-development since 3 years and have good expertise in it. Many of my project are web platform based. Currently I am studying about Machine Learning and Advance Machine Learning concepts.</p>

@@ -7,8 +7,18 @@
     "endDate": "Dec 2025",
     "workPoints": [
       "Worked on Intergration and Syncronisation of ElevenLab and Datagram TTS API Service.",
-      "Imporved the Frontend of the website using ReactJS.",
-      ""
+      "Imporved the Frontend of the website using ReactJS."
+    ]
+  },
+  {
+    "company": "CodeAlpha",
+    "role": "Machine Learning Intern",
+    "logo": "./Assets/certificateimage/CompanyImage/codealpha.jpg",
+    "startDate": "Jan 2025",
+    "endDate": "Feb 2025",
+    "workPoints": [
+      "Implemented Multiple Machine Learning Model",
+      "Learned Data Preprocessing techniques."
     ]
   }
 ]
