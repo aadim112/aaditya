@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/aaditya/static/css/main.beafbfe8.css",
-    "main.js": "/aaditya/static/js/main.1a2a01c1.js",
+    "main.js": "/aaditya/static/js/main.35050496.js",
     "static/js/488.afde8007.chunk.js": "/aaditya/static/js/488.afde8007.chunk.js",
     "static/media/cmate.png": "/aaditya/static/media/cmate.a8d5a64a45991a0dc910.png",
     "static/media/medilog.png": "/aaditya/static/media/medilog.1ff0ed9fc315f644c7ae.png",
@@ -28,11 +28,11 @@
     "static/media/credly.png": "/aaditya/static/media/credly.9ee713e9a8942c410854.png",
     "index.html": "/aaditya/index.html",
     "main.beafbfe8.css.map": "/aaditya/static/css/main.beafbfe8.css.map",
-    "main.1a2a01c1.js.map": "/aaditya/static/js/main.1a2a01c1.js.map",
+    "main.35050496.js.map": "/aaditya/static/js/main.35050496.js.map",
     "488.afde8007.chunk.js.map": "/aaditya/static/js/488.afde8007.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.beafbfe8.css",
-    "static/js/main.1a2a01c1.js"
+    "static/js/main.35050496.js"
   ]
 }
